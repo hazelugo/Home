@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hector Lugo — Cybersecurity & Network Professional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:         oklch(11% 0.018 245);
+    --bg-2:       oklch(14% 0.022 245);
+    --bg-3:       oklch(17% 0.025 245);
+    --text:       oklch(90% 0.012 70);
+    --text-dim:   oklch(55% 0.015 245);
+    --accent:     oklch(66% 0.19 230);
+    --accent-2:   oklch(74% 0.13 52);
+    --accent-glow: oklch(66% 0.19 230 / 0.18);
+    --border:     oklch(22% 0.025 245);
+    --border-2:   oklch(28% 0.03 245);
+    --radius:     4px;
+    --font-display: 'Syne', sans-serif;
+    --font-body:    'Plus Jakarta Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+
+  /* ─── NAV ──────────────────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 2.5rem;
+    background: oklch(11% 0.018 245 / 0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+    transition: padding 0.3s;
+  }
+  nav.scrolled { padding: 0.65rem 2.5rem; }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-links {
+    display: flex; gap: 2rem; list-style: none;
+    font-size: 0.85rem; font-weight: 500; letter-spacing: 0.04em;
+  }
+  .nav-links a {
+    color: var(--text-dim); text-decoration: none;
+    transition: color 0.2s;
+    text-transform: uppercase;
+  }
+  .nav-links a:hover { color: var(--text); }
+  .nav-cta {
+    font-size: 0.82rem; font-weight: 600; letter-spacing: 0.05em;
+    text-transform: uppercase; text-decoration: none;
+    color: var(--accent); border: 1px solid var(--accent);
+    padding: 0.45rem 1.1rem; border-radius: var(--radius);
+    transition: background 0.2s, color 0.2s;
+  }
+  .nav-cta:hover { background: var(--accent); color: var(--bg); }
+  .nav-menu-btn {
+    display: none; background: none; border: none; cursor: pointer;
+    flex-direction: column; gap: 5px; padding: 4px;
+  }
+  .nav-menu-btn span {
+    display: block; width: 22px; height: 2px;
+    background: var(--text); border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  /* ─── HERO ─────────────────────────────────────────── */
+  #hero {
+    position: relative; min-height: 100svh;
+    display: flex; align-items: center;
+    padding: 7rem 2.5rem 4rem;
+    overflow: hidden;
+  }
+  #hero-canvas {
+    position: absolute; inset: 0; z-index: 0;
+    opacity: 0.4;
+  }
+  .hero-inner {
+    position: relative; z-index: 1;
+    max-width: 1100px; margin: 0 auto; width: 100%;
+  }
+  .hero-eyebrow {
+    font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: block;
+    width: 32px; height: 1px; background: var(--accent);
+  }
+  .hero-name {
+    font-family: var(--font-display);
+    font-size: clamp(3.2rem, 8vw, 7rem);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+    color: var(--text);
+  }
+  .hero-name .last { color: var(--accent); }
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 2.2vw, 1.4rem);
+    font-weight: 400;
+    color: var(--text-dim);
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.01em;
+  }
+  .hero-title strong { color: var(--text); font-weight: 600; }
+  .hero-desc {
+    max-width: 560px;
+    font-size: 1rem; font-weight: 300;
+    color: oklch(68% 0.015 245);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+  }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--accent); color: var(--bg);
+    font-family: var(--font-body); font-size: 0.88rem;
+    font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+    padding: 0.8rem 1.8rem; border-radius: var(--radius);
+    text-decoration: none; border: none; cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: oklch(72% 0.19 230); transform: translateY(-1px); }
+  .btn-ghost {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: transparent; color: var(--text-dim);
+    font-family: var(--font-body); font-size: 0.88rem;
+    font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase;
+    padding: 0.8rem 1.8rem; border-radius: var(--radius);
+    text-decoration: none; border: 1px solid var(--border-2);
+    cursor: pointer; transition: color 0.2s, border-color 0.2s;
+  }
+  .btn-ghost:hover { color: var(--text); border-color: var(--text-dim); }
+  .hero-stats {
+    display: flex; gap: 2.5rem; margin-top: 4rem;
+    padding-top: 2rem; border-top: 1px solid var(--border);
+  }
+  .hero-stat-num {
+    font-family: var(--font-display);
+    font-size: 2rem; font-weight: 800;
+    color: var(--text); line-height: 1;
+    margin-bottom: 0.2rem;
+  }
+  .hero-stat-num span { color: var(--accent); }
+  .hero-stat-label {
+    font-size: 0.75rem; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .hero-scroll-hint {
+    position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+    color: var(--text-dim); font-size: 0.72rem; letter-spacing: 0.1em;
+    text-transform: uppercase; z-index: 1;
+    animation: bounce 2.5s ease-in-out infinite;
+  }
+  .scroll-line {
+    width: 1px; height: 40px; background: linear-gradient(to bottom, var(--border-2), transparent);
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.5; }
+    50% { transform: translateX(-50%) translateY(6px); opacity: 1; }
+  }
+
+  /* ─── LAYOUT UTIL ──────────────────────────────────── */
+  section { padding: clamp(4rem, 8vw, 7rem) 2.5rem; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--accent);
+    display: flex; align-items: center; gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .section-label::before {
+    content: ''; width: 24px; height: 1px; background: var(--accent);
+  }
+  .section-heading {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800; line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--text); margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  /* ─── ABOUT ────────────────────────────────────────── */
+  #about { background: var(--bg-2); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4rem; align-items: start;
+  }
+  .about-text p {
+    color: oklch(68% 0.015 245);
+    margin-bottom: 1.25rem;
+    font-weight: 300; font-size: 1.02rem;
+  }
+  .about-text p strong { color: var(--text); font-weight: 500; }
+  .about-highlights {
+    display: flex; flex-direction: column; gap: 1.25rem;
+    margin-top: 2rem; padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+  .highlight-item {
+    display: flex; align-items: flex-start; gap: 1rem;
+  }
+  .highlight-icon {
+    width: 36px; height: 36px; flex-shrink: 0;
+    border: 1px solid var(--border-2);
+    border-radius: var(--radius);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent);
+  }
+  .highlight-icon svg { width: 16px; height: 16px; }
+  .highlight-text strong {
+    display: block; font-size: 0.88rem; font-weight: 600;
+    color: var(--text); margin-bottom: 0.15rem;
+  }
+  .highlight-text span {
+    font-size: 0.82rem; color: var(--text-dim);
+  }
+  .about-side { display: flex; flex-direction: column; gap: 1.5rem; }
+  .info-block {
+    padding: 1.5rem;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+  .info-block-title {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  .info-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0.6rem 0; border-bottom: 1px solid var(--border);
+    font-size: 0.88rem;
+  }
+  .info-row:last-child { border-bottom: none; }
+  .info-row .key { color: var(--text-dim); font-weight: 400; }
+  .info-row .val { color: var(--text); font-weight: 500; }
+  .info-row a { color: var(--accent); text-decoration: none; }
+  .info-row a:hover { text-decoration: underline; }
+
+  /* ─── CERTIFICATIONS ───────────────────────────────── */
+  #certifications { background: var(--bg); }
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+  }
+  .cert-card {
+    padding: 1.75rem 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-2);
+    position: relative; overflow: hidden;
+    transition: border-color 0.3s, transform 0.2s;
+  }
+  .cert-card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 2px;
+    background: var(--accent); opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .cert-card:hover { border-color: var(--border-2); transform: translateY(-3px); }
+  .cert-card:hover::before { opacity: 1; }
+  .cert-badge {
+    width: 48px; height: 48px; border-radius: 50%;
+    border: 2px solid var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.25rem;
+    color: var(--accent);
+    background: var(--accent-glow);
+  }
+  .cert-badge svg { width: 22px; height: 22px; }
+  .cert-name {
+    font-family: var(--font-display);
+    font-size: 0.98rem; font-weight: 700;
+    color: var(--text); margin-bottom: 0.3rem;
+    line-height: 1.2;
+  }
+  .cert-org {
+    font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--text-dim);
+  }
+  .cert-status {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; color: oklch(70% 0.15 145);
+    margin-top: 1rem;
+  }
+  .cert-status::before {
+    content: ''; width: 6px; height: 6px; border-radius: 50%;
+    background: oklch(70% 0.15 145);
+  }
+
+  /* ─── SKILLS ───────────────────────────────────────── */
+  #skills { background: var(--bg-2); }
+  .skills-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem 3rem;
+  }
+  .skill-group { padding-bottom: 1rem; }
+  .skill-group-name {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--accent-2);
+    margin-bottom: 1rem; padding-bottom: 0.65rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+  .skill-tag {
+    font-size: 0.78rem; font-weight: 500;
+    padding: 0.3rem 0.7rem;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    color: oklch(72% 0.012 245);
+    letter-spacing: 0.01em;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .skill-tag:hover {
+    border-color: var(--accent);
+    color: var(--text);
+  }
+
+  /* ─── PROJECTS ─────────────────────────────────────── */
+  #projects { background: var(--bg); }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
+  }
+  .project-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-2);
+    overflow: hidden;
+    transition: border-color 0.3s;
+    cursor: pointer;
+  }
+  .project-card:hover { border-color: var(--border-2); }
+  .project-card.open { border-color: var(--accent); }
+  .project-header {
+    padding: 1.5rem;
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 1rem;
+  }
+  .project-tag {
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; padding: 0.2rem 0.6rem;
+    border-radius: 2px; flex-shrink: 0; margin-top: 0.15rem;
+  }
+  .tag-security { background: oklch(25% 0.06 230); color: var(--accent); }
+  .tag-network  { background: oklch(25% 0.06 52);  color: var(--accent-2); }
+  .tag-siem     { background: oklch(25% 0.06 290); color: oklch(72% 0.14 290); }
+  .tag-av       { background: oklch(25% 0.06 145); color: oklch(70% 0.14 145); }
+  .project-title {
+    font-family: var(--font-display);
+    font-size: 1.05rem; font-weight: 700;
+    color: var(--text); line-height: 1.2;
+    margin-bottom: 0.3rem;
+  }
+  .project-summary {
+    font-size: 0.84rem; color: var(--text-dim);
+    line-height: 1.5;
+  }
+  .project-expand-btn {
+    width: 28px; height: 28px; flex-shrink: 0;
+    border: 1px solid var(--border-2); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-dim); background: none;
+    font-size: 1.1rem; line-height: 1;
+    transition: all 0.25s; cursor: pointer;
+    padding: 0;
+  }
+  .project-card.open .project-expand-btn {
+    transform: rotate(45deg);
+    border-color: var(--accent); color: var(--accent);
+  }
+  .project-details {
+    display: grid; grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+  }
+  .project-details.open { grid-template-rows: 1fr; }
+  .project-details-inner {
+    overflow: hidden;
+    padding: 0 1.5rem;
+  }
+  .project-details.open .project-details-inner {
+    padding: 0 1.5rem 1.5rem;
+  }
+  .project-detail-text {
+    font-size: 0.88rem; color: oklch(65% 0.015 245);
+    line-height: 1.7; padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+  }
+  .project-tools {
+    display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 1rem;
+  }
+  .tool-chip {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; padding: 0.2rem 0.55rem;
+    border: 1px solid var(--border); border-radius: 2px;
+    color: var(--text-dim);
+  }
+
+  /* ─── EXPERIENCE ───────────────────────────────────── */
+  #experience { background: var(--bg-2); }
+  .timeline {
+    position: relative; padding-left: 1.75rem;
+    border-left: 1px solid var(--border);
+  }
+  .timeline-item {
+    position: relative; padding-bottom: 3rem;
+  }
+  .timeline-item:last-child { padding-bottom: 0; }
+  .timeline-dot {
+    position: absolute; left: -1.875rem; top: 0.25rem;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--accent); border: 2px solid var(--bg-2);
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+  .timeline-period {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--accent-2);
+    margin-bottom: 0.35rem;
+  }
+  .timeline-role {
+    font-family: var(--font-display);
+    font-size: 1.15rem; font-weight: 700;
+    color: var(--text); margin-bottom: 0.1rem;
+  }
+  .timeline-org {
+    font-size: 0.88rem; color: var(--text-dim);
+    margin-bottom: 1rem;
+  }
+  .timeline-bullets {
+    list-style: none; display: flex; flex-direction: column; gap: 0.55rem;
+  }
+  .timeline-bullets li {
+    font-size: 0.9rem; color: oklch(65% 0.015 245);
+    padding-left: 1.2rem; position: relative;
+    line-height: 1.55;
+  }
+  .timeline-bullets li::before {
+    content: '—'; position: absolute; left: 0;
+    color: var(--accent); font-size: 0.75rem; top: 0.05em;
+  }
+
+  /* ─── COMING SOON ──────────────────────────────────── */
+  #coming-soon { background: var(--bg); }
+  .projects-placeholder {
+    border: 1px dashed var(--border-2);
+    border-radius: var(--radius);
+    padding: 4rem 2rem;
+    text-align: center;
+    background: var(--bg-2);
+    position: relative; overflow: hidden;
+  }
+  .placeholder-glyph {
+    font-family: var(--font-display);
+    font-size: 5rem; font-weight: 800;
+    color: var(--border-2); line-height: 1;
+    margin-bottom: 1.5rem;
+    user-select: none;
+  }
+  .placeholder-heading {
+    font-family: var(--font-display);
+    font-size: 1.5rem; font-weight: 700;
+    color: var(--text); margin-bottom: 0.75rem;
+  }
+  .placeholder-sub {
+    font-size: 0.92rem; color: var(--text-dim);
+    max-width: 420px; margin: 0 auto;
+  }
+  .subdomain-list {
+    display: flex; flex-wrap: wrap; gap: 0.75rem;
+    justify-content: center; margin-top: 2rem;
+  }
+  .subdomain-pill {
+    font-size: 0.8rem; font-weight: 500;
+    padding: 0.45rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    color: var(--text-dim);
+    background: var(--bg-3);
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  .subdomain-pill .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent-2); opacity: 0.5;
+  }
+
+  /* ─── CONTACT ──────────────────────────────────────── */
+  #contact { background: var(--bg-2); }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 4rem; align-items: start;
+  }
+  .contact-cta-heading {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 800; line-height: 1.1;
+    letter-spacing: -0.02em; margin-bottom: 1.25rem;
+  }
+  .contact-cta-heading em { font-style: normal; color: var(--accent); }
+  .contact-note {
+    font-size: 0.95rem; color: oklch(60% 0.015 245);
+    margin-bottom: 2rem; max-width: 380px; line-height: 1.65;
+  }
+  .contact-links { display: flex; flex-direction: column; gap: 1rem; }
+  .contact-link {
+    display: flex; align-items: center; gap: 1rem;
+    text-decoration: none; padding: 1rem 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-3);
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .contact-link:hover { border-color: var(--accent); background: var(--accent-glow); }
+  .contact-link-icon {
+    width: 38px; height: 38px; flex-shrink: 0;
+    border: 1px solid var(--border-2); border-radius: var(--radius);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent);
+  }
+  .contact-link-icon svg { width: 18px; height: 18px; }
+  .contact-link-label {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--text-dim);
+    margin-bottom: 0.15rem;
+  }
+  .contact-link-val {
+    font-size: 0.92rem; font-weight: 500; color: var(--text);
+  }
+  .contact-availability {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-3);
+  }
+  .availability-label {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--text-dim);
+    margin-bottom: 1rem;
+  }
+  .availability-status {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-family: var(--font-display);
+    font-size: 1.05rem; font-weight: 700;
+    color: oklch(72% 0.15 145); margin-bottom: 0.75rem;
+  }
+  .pulse-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: oklch(72% 0.15 145);
+    position: relative;
+  }
+  .pulse-dot::after {
+    content: ''; position: absolute; inset: -4px;
+    border-radius: 50%; background: oklch(72% 0.15 145 / 0.25);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0; }
+  }
+  .availability-note {
+    font-size: 0.84rem; color: var(--text-dim); line-height: 1.55;
+  }
+  .availability-note strong { color: var(--text); font-weight: 500; }
+
+  /* ─── FOOTER ───────────────────────────────────────── */
+  footer {
+    padding: 2rem 2.5rem;
+    border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem;
+    font-size: 0.78rem; color: var(--text-dim);
+  }
+  footer a { color: var(--text-dim); text-decoration: none; }
+  footer a:hover { color: var(--text); }
+
+  /* ─── REVEAL ANIMATIONS ────────────────────────────── */
+  .reveal {
+    opacity: 0; transform: translateY(22px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ─── RESPONSIVE ───────────────────────────────────── */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-links, .nav-cta { display: none; }
+    .nav-menu-btn { display: flex; }
+    #hero { padding: 6rem 1.25rem 3rem; }
+    section { padding: 3.5rem 1.25rem; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+    .timeline { padding-left: 1.25rem; }
+    .timeline-dot { left: -1.375rem; }
+    footer { flex-direction: column; text-align: center; }
+  }
+
+  /* Mobile nav drawer */
+  .nav-drawer {
+    position: fixed; top: 0; right: 0; bottom: 0; width: 260px; z-index: 200;
+    background: var(--bg-2); border-left: 1px solid var(--border);
+    padding: 5rem 2rem 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    display: flex; flex-direction: column; gap: 1.5rem;
+  }
+  .nav-drawer.open { transform: translateX(0); }
+  .nav-drawer a {
+    color: var(--text-dim); text-decoration: none;
+    font-size: 1.1rem; font-weight: 500;
+    padding: 0.5rem 0; border-bottom: 1px solid var(--border);
+    transition: color 0.2s;
+  }
+  .nav-drawer a:hover { color: var(--text); }
+  .nav-overlay {
+    position: fixed; inset: 0; z-index: 150;
+    background: oklch(0% 0 0 / 0.6);
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  .nav-overlay.open { opacity: 1; pointer-events: all; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">H<span>.</span>Lugo</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#coming-soon">Lab Projects</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Contact</a>
+  <button class="nav-menu-btn" id="menuBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-overlay" id="navOverlay"></div>
+<nav class="nav-drawer" id="navDrawer">
+  <a href="#about" class="drawer-link">About</a>
+  <a href="#certifications" class="drawer-link">Certifications</a>
+  <a href="#skills" class="drawer-link">Skills</a>
+  <a href="#projects" class="drawer-link">Projects</a>
+  <a href="#experience" class="drawer-link">Experience</a>
+  <a href="#coming-soon" class="drawer-link">Lab Projects</a>
+  <a href="#contact" class="drawer-link">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Available for opportunities</div>
+    <h1 class="hero-name">
+      Hector<br><span class="last">Lugo</span>
+    </h1>
+    <p class="hero-title">
+      <strong>Cybersecurity &amp; Network Professional</strong> &nbsp;·&nbsp; CompTIA Trifecta Certified
+    </p>
+    <p class="hero-desc">
+      6+ years in enterprise IT, hands-on security lab work, and a graduating B.S. in Computer Information Technology. Bilingual. Mission-focused. Building systems that defend and connect.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        View Lab Work
+      </a>
+      <a href="#contact" class="btn-ghost">Get in Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">6<span>+</span></div>
+        <div class="hero-stat-label">Years in IT</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">4</div>
+        <div class="hero-stat-label">Certifications</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">5</div>
+        <div class="hero-stat-label">Lab Projects</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">2</div>
+        <div class="hero-stat-label">Languages</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="scroll-line"></div>
+    Scroll
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-label reveal">About</p>
+        <h2 class="section-heading reveal">Defending networks.<br>Building infrastructure.</h2>
+        <p class="reveal reveal-delay-1">
+          I'm an IT professional with a dual focus in <strong>cybersecurity analysis</strong> and <strong>network administration</strong>, grounded in six years of day-to-day enterprise support at Mission CISD — one of the largest school districts in South Texas.
+        </p>
+        <p class="reveal reveal-delay-2">
+          That environment demands real compliance rigor (FERPA, TEA), fast triage under operational pressure, and the ability to communicate clearly across every level of an organization. I brought that discipline into my home lab, where I've built out vulnerability assessment environments, SIEM pipelines, and segmented network architectures from scratch.
+        </p>
+        <p class="reveal reveal-delay-3">
+          I'm fluent in English and Spanish, graduating May 2026, and looking to make the full transition into a dedicated security or network role where the work actually matters.
+        </p>
+        <div class="about-highlights reveal reveal-delay-4">
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="highlight-text">
+              <strong>Security-first mindset</strong>
+              <span>Threat detection, vulnerability assessment, FERPA/TEA compliance</span>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            </div>
+            <div class="highlight-text">
+              <strong>Network architecture &amp; design</strong>
+              <span>VLANs, inter-VLAN routing, firewall policy, VPN tunnels</span>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div class="highlight-text">
+              <strong>Bilingual communicator</strong>
+              <span>English &amp; Spanish — technical clarity for any audience</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-side">
+        <div class="info-block reveal">
+          <div class="info-block-title">Contact Info</div>
+          <div class="info-row"><span class="key">Email</span><a class="val" href="mailto:haze.lugo@gmail.com">haze.lugo@gmail.com</a></div>
+          <div class="info-row"><span class="key">Phone</span><span class="val">956-432-3287</span></div>
+          <div class="info-row"><span class="key">LinkedIn</span><a class="val" href="https://linkedin.com/in/hhlugo" target="_blank" rel="noopener">hhlugo</a></div>
+          <div class="info-row"><span class="key">Location</span><span class="val">South Texas</span></div>
+          <div class="info-row"><span class="key">Languages</span><span class="val">English, Spanish</span></div>
+        </div>
+        <div class="info-block reveal reveal-delay-1">
+          <div class="info-block-title">Education</div>
+          <div class="info-row" style="flex-direction:column; align-items:flex-start; gap:0.25rem;">
+            <span class="val" style="font-weight:600;">B.A.T. — Computer Information Technology</span>
+            <span class="key">South Texas College</span>
+            <span class="key" style="color: var(--accent-2); font-size:0.75rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; margin-top:0.25rem;">Expected May 2026</span>
+          </div>
+        </div>
+        <div class="info-block reveal reveal-delay-2">
+          <div class="info-block-title">Focus Areas</div>
+          <div class="info-row"><span class="key">Primary</span><span class="val">Cybersecurity Analysis</span></div>
+          <div class="info-row"><span class="key">Secondary</span><span class="val">Network Administration</span></div>
+          <div class="info-row"><span class="key">Domain</span><span class="val">Enterprise / Education</span></div>
+          <div class="info-row"><span class="key">Experience</span><span class="val">6+ years enterprise IT</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="container">
+    <p class="section-label reveal">Credentials</p>
+    <h2 class="section-heading reveal">Certified &amp; validated.</h2>
+    <div class="certs-grid">
+
+      <div class="cert-card reveal">
+        <div class="cert-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="cert-name">Security+</div>
+        <div class="cert-org">CompTIA</div>
+        <div class="cert-status">Active</div>
+      </div>
+
+      <div class="cert-card reveal reveal-delay-1">
+        <div class="cert-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+        </div>
+        <div class="cert-name">Network+</div>
+        <div class="cert-org">CompTIA</div>
+        <div class="cert-status">Active</div>
+      </div>
+
+      <div class="cert-card reveal reveal-delay-2">
+        <div class="cert-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="cert-name">A+</div>
+        <div class="cert-org">CompTIA</div>
+        <div class="cert-status">Active</div>
+      </div>
+
+      <div class="cert-card reveal reveal-delay-3">
+        <div class="cert-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        </div>
+        <div class="cert-name">Certified in Cybersecurity</div>
+        <div class="cert-org">ISC2 — CC</div>
+        <div class="cert-status">Active</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <p class="section-label reveal">Capabilities</p>
+    <h2 class="section-heading reveal">What I work with.</h2>
+    <div class="skills-layout">
+
+      <div class="skill-group reveal">
+        <div class="skill-group-name">Networking</div>
+        <div class="skill-tags">
+          <span class="skill-tag">TCP/IP</span>
+          <span class="skill-tag">Subnetting</span>
+          <span class="skill-tag">VLANs</span>
+          <span class="skill-tag">LAN/WAN</span>
+          <span class="skill-tag">DHCP</span>
+          <span class="skill-tag">DNS</span>
+          <span class="skill-tag">Router Config</span>
+          <span class="skill-tag">Switch Config</span>
+          <span class="skill-tag">Wireshark</span>
+          <span class="skill-tag">Network Troubleshooting</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal reveal-delay-1">
+        <div class="skill-group-name">Security</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Access Control</span>
+          <span class="skill-tag">Threat Detection</span>
+          <span class="skill-tag">Vulnerability Assessment</span>
+          <span class="skill-tag">SIEM / Splunk</span>
+          <span class="skill-tag">Data Privacy</span>
+          <span class="skill-tag">FERPA Compliance</span>
+          <span class="skill-tag">TEA Regulations</span>
+          <span class="skill-tag">Kali Linux</span>
+          <span class="skill-tag">Nmap</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal reveal-delay-2">
+        <div class="skill-group-name">Systems &amp; OS</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Windows Server</span>
+          <span class="skill-tag">Windows Desktop</span>
+          <span class="skill-tag">macOS</span>
+          <span class="skill-tag">Linux (Kali)</span>
+          <span class="skill-tag">Active Directory</span>
+          <span class="skill-tag">Group Policy</span>
+          <span class="skill-tag">Virtualization</span>
+        </div>
+      </div>
+
+      <div class="skill-group reveal reveal-delay-3">
+        <div class="skill-group-name">Hardware &amp; Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag">PC Assembly &amp; Repair</span>
+          <span class="skill-tag">Workstation Deployment</span>
+          <span class="skill-tag">Peripheral Config</span>
+          <span class="skill-tag">Mobile Devices</span>
+          <span class="skill-tag">Microsoft 365</span>
+          <span class="skill-tag">Ticketing Systems</span>
+          <span class="skill-tag">Asset Management</span>
+          <span class="skill-tag">VOIP Systems</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS (Lab) -->
+<section id="projects">
+  <div class="container">
+    <p class="section-label reveal">Lab Work</p>
+    <h2 class="section-heading reveal">Hands-on projects.</h2>
+    <div class="projects-grid">
+
+      <div class="project-card reveal" onclick="toggleProject(this)">
+        <div class="project-header">
+          <div>
+            <span class="project-tag tag-security">Security</span>
+            <div class="project-title" style="margin-top:0.6rem;">Vulnerability Assessment Lab</div>
+            <div class="project-summary">Deployed a sandboxed attack environment and produced a formal assessment report.</div>
+          </div>
+          <button class="project-expand-btn" aria-label="Expand">+</button>
+        </div>
+        <div class="project-details">
+          <div class="project-details-inner">
+            <div class="project-detail-text">
+              Stood up Metasploitable 2 and DVWA in an isolated virtual network to simulate a target-rich environment. Performed host discovery and service enumeration with Nmap, then used Kali Linux tooling to identify and demonstrate exploitable vulnerabilities. Delivered a formal written report with severity ratings (CVSS-informed) and remediation recommendations — mirroring a real-world penetration test engagement.
+            </div>
+            <div class="project-tools">
+              <span class="tool-chip">Kali Linux</span>
+              <span class="tool-chip">Nmap</span>
+              <span class="tool-chip">Metasploitable 2</span>
+              <span class="tool-chip">DVWA</span>
+              <span class="tool-chip">VirtualBox</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1" onclick="toggleProject(this)">
+        <div class="project-header">
+          <div>
+            <span class="project-tag tag-siem">SIEM</span>
+            <div class="project-title" style="margin-top:0.6rem;">SIEM Log Analysis Lab</div>
+            <div class="project-summary">End-to-end Splunk pipeline with detection alerts for real threat patterns.</div>
+          </div>
+          <button class="project-expand-btn" aria-label="Expand">+</button>
+        </div>
+        <div class="project-details">
+          <div class="project-details-inner">
+            <div class="project-detail-text">
+              Installed and configured Splunk Free to ingest logs from a firewall, router, and Windows Event sources. Built custom dashboards and detection rules targeting failed authentication bursts, port scanning signatures, and anomalous outbound traffic volumes. This pipeline closely mirrors the monitoring architecture used in real SOC environments.
+            </div>
+            <div class="project-tools">
+              <span class="tool-chip">Splunk Free</span>
+              <span class="tool-chip">Windows Event Logs</span>
+              <span class="tool-chip">Firewall Logs</span>
+              <span class="tool-chip">SPL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-2" onclick="toggleProject(this)">
+        <div class="project-header">
+          <div>
+            <span class="project-tag tag-network">Network</span>
+            <div class="project-title" style="margin-top:0.6rem;">Network Traffic Analysis</div>
+            <div class="project-summary">Packet capture methodology for detecting ARP spoofing and DNS exfiltration.</div>
+          </div>
+          <button class="project-expand-btn" aria-label="Expand">+</button>
+        </div>
+        <div class="project-details">
+          <div class="project-details-inner">
+            <div class="project-detail-text">
+              Captured live traffic across a multi-segment home network to establish baseline behavioral profiles. Developed a documented methodology for identifying anomalous patterns — including ARP spoofing indicators, DNS tunneling signatures, and unexpected inter-VLAN flows. The approach translates directly to blue team triage workflows.
+            </div>
+            <div class="project-tools">
+              <span class="tool-chip">Wireshark</span>
+              <span class="tool-chip">Multi-segment Network</span>
+              <span class="tool-chip">Packet Analysis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1" onclick="toggleProject(this)">
+        <div class="project-header">
+          <div>
+            <span class="project-tag tag-network">Network</span>
+            <div class="project-title" style="margin-top:0.6rem;">Segmented Home Network Lab</div>
+            <div class="project-summary">Multi-VLAN architecture with least-privilege firewall policy and VPN remote access.</div>
+          </div>
+          <button class="project-expand-btn" aria-label="Expand">+</button>
+        </div>
+        <div class="project-details">
+          <div class="project-details-inner">
+            <div class="project-detail-text">
+              Designed and deployed a production-grade home network using VLANs to segment IoT, media, and trusted device traffic. Configured DHCP scoping per subnet, inter-VLAN routing policies, and stateful firewall rules enforcing least-privilege communication between zones. Implemented a VPN tunnel to simulate secure enterprise remote access — verifying full tunnel integrity end-to-end.
+            </div>
+            <div class="project-tools">
+              <span class="tool-chip">VLAN Segmentation</span>
+              <span class="tool-chip">Firewall Rules</span>
+              <span class="tool-chip">VPN</span>
+              <span class="tool-chip">DHCP Scoping</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-2" onclick="toggleProject(this)">
+        <div class="project-header">
+          <div>
+            <span class="project-tag tag-av">A/V</span>
+            <div class="project-title" style="margin-top:0.6rem;">A/V Production LAN</div>
+            <div class="project-summary">Dedicated LAN for pro audio/video with QoS-tuned live streaming performance.</div>
+          </div>
+          <button class="project-expand-btn" aria-label="Expand">+</button>
+        </div>
+        <div class="project-details">
+          <div class="project-details-inner">
+            <div class="project-detail-text">
+              Configured a purpose-built LAN for professional audio and video production workflows. Applied QoS policies to prioritize real-time and low-latency traffic for live streaming pipelines and remote digital mixer control over TCP/IP. Validated end-to-end latency targets and stream stability under sustained production load.
+            </div>
+            <div class="project-tools">
+              <span class="tool-chip">QoS Policy</span>
+              <span class="tool-chip">Dedicated LAN</span>
+              <span class="tool-chip">Live Streaming</span>
+              <span class="tool-chip">TCP/IP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <p class="section-label reveal">Work History</p>
+    <h2 class="section-heading reveal">Where I've operated.</h2>
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Sep 2019 — Present</div>
+        <div class="timeline-role">Attendance &amp; Purchasing — IT Liaison</div>
+        <div class="timeline-org">Mission Consolidated Independent School District</div>
+        <ul class="timeline-bullets">
+          <li>Safeguard sensitive student records in strict compliance with TEA and FERPA data privacy requirements, applying regulatory frameworks hands-on at scale.</li>
+          <li>Manage the full procurement lifecycle for department technology assets — purchase orders, requisitions, and hardware/software inventory records.</li>
+          <li>Primary on-site technical resource for 10+ front office staff: workstation deployment, hardware troubleshooting, and peripheral configuration.</li>
+          <li>Diagnose and resolve Tier 1 network connectivity and software issues under operational pressure during enrollment and high-stakes testing periods.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal reveal-delay-1">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Mar 2018 — Sep 2019</div>
+        <div class="timeline-role">Bilingual Billing &amp; Tech Support</div>
+        <div class="timeline-org">Charter Communications</div>
+        <ul class="timeline-bullets">
+          <li>Provided remote technical support for residential internet and VOIP services — diagnosing physical layer issues, modem/router configuration failures, and network connectivity problems.</li>
+          <li>Applied root-cause analysis to triage complex service interruptions, correctly differentiating billing-related from technical issues.</li>
+          <li>Delivered clear technical solutions to non-technical customers in English and Spanish, improving first-call resolution and satisfaction metrics.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMING SOON (subdomain projects) -->
+<section id="coming-soon">
+  <div class="container">
+    <p class="section-label reveal">Subdomain Projects</p>
+    <h2 class="section-heading reveal">More on the way.</h2>
+    <div class="projects-placeholder reveal">
+      <div class="placeholder-glyph">{ }</div>
+      <div class="placeholder-heading">Projects are being deployed</div>
+      <div class="placeholder-sub">Each project lives at its own subdomain. Check back soon — labs, tools, and write-ups are in progress.</div>
+      <div class="subdomain-list">
+        <div class="subdomain-pill"><span class="dot"></span>security.hectorlugo.dev</div>
+        <div class="subdomain-pill"><span class="dot"></span>lab.hectorlugo.dev</div>
+        <div class="subdomain-pill"><span class="dot"></span>network.hectorlugo.dev</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <p class="section-label reveal">Contact</p>
+        <h2 class="contact-cta-heading reveal">Let's talk about <em>what you're building.</em></h2>
+        <p class="contact-note reveal">I'm actively seeking a cybersecurity analyst or network administrator role. Open to full-time, contract, or internship opportunities — reach out and let's connect.</p>
+        <div class="contact-links reveal">
+          <a href="mailto:haze.lugo@gmail.com" class="contact-link">
+            <div class="contact-link-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-link-label">Email</div>
+              <div class="contact-link-val">haze.lugo@gmail.com</div>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/hhlugo" target="_blank" rel="noopener" class="contact-link">
+            <div class="contact-link-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <div class="contact-link-label">LinkedIn</div>
+              <div class="contact-link-val">linkedin.com/in/hhlugo</div>
+            </div>
+          </a>
+          <a href="tel:9564323287" class="contact-link">
+            <div class="contact-link-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.6 6.6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="contact-link-label">Phone</div>
+              <div class="contact-link-val">956-432-3287</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="contact-availability">
+          <div class="availability-label">Current Status</div>
+          <div class="availability-status">
+            <span class="pulse-dot"></span>
+            Open to opportunities
+          </div>
+          <div class="availability-note">
+            Graduating <strong>May 2026</strong>. Available for full-time positions, internships, or contract work in <strong>cybersecurity</strong> or <strong>network administration</strong>. Located in South Texas; open to relocation or remote.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 Hector Lugo</span>
+  <span>Cybersecurity &amp; Network Professional · South Texas</span>
+  <a href="mailto:haze.lugo@gmail.com">haze.lugo@gmail.com</a>
+</footer>
+
+<script>
+// ── NAV SCROLL ──────────────────────────────────────────────
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+
+// ── MOBILE NAV ──────────────────────────────────────────────
+const menuBtn = document.getElementById('menuBtn');
+const navDrawer = document.getElementById('navDrawer');
+const navOverlay = document.getElementById('navOverlay');
+
+function openNav() {
+  navDrawer.classList.add('open');
+  navOverlay.classList.add('open');
+}
+function closeNav() {
+  navDrawer.classList.remove('open');
+  navOverlay.classList.remove('open');
+}
+menuBtn.addEventListener('click', () => {
+  navDrawer.classList.contains('open') ? closeNav() : openNav();
+});
+navOverlay.addEventListener('click', closeNav);
+document.querySelectorAll('.drawer-link').forEach(a => a.addEventListener('click', closeNav));
+
+// ── HERO CANVAS ─────────────────────────────────────────────
+(function() {
+  const canvas = document.getElementById('hero-canvas');
+  const ctx = canvas.getContext('2d');
+
+  function resize() {
+    canvas.width  = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize, { passive: true });
+
+  const NODE_COUNT = 60;
+  const CONNECT_DIST = 160;
+  const nodes = [];
+
+  for (let i = 0; i < NODE_COUNT; i++) {
+    nodes.push({
+      x: Math.random(),
+      y: Math.random(),
+      vx: (Math.random() - 0.5) * 0.0003,
+      vy: (Math.random() - 0.5) * 0.0003,
+      r: Math.random() * 1.5 + 0.5
+    });
+  }
+
+  let raf;
+  function draw() {
+    const w = canvas.width, h = canvas.height;
+    ctx.clearRect(0, 0, w, h);
+
+    // update
+    for (const n of nodes) {
+      n.x += n.vx; n.y += n.vy;
+      if (n.x < 0 || n.x > 1) n.vx *= -1;
+      if (n.y < 0 || n.y > 1) n.vy *= -1;
+    }
+
+    // edges
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const ax = nodes[i].x * w, ay = nodes[i].y * h;
+        const bx = nodes[j].x * w, by = nodes[j].y * h;
+        const dx = ax - bx, dy = ay - by;
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        if (dist < CONNECT_DIST) {
+          const alpha = (1 - dist / CONNECT_DIST) * 0.25;
+          ctx.beginPath();
+          ctx.moveTo(ax, ay);
+          ctx.lineTo(bx, by);
+          ctx.strokeStyle = `oklch(66% 0.19 230 / ${alpha})`;
+          ctx.lineWidth = 0.75;
+          ctx.stroke();
+        }
+      }
+    }
+
+    // nodes
+    for (const n of nodes) {
+      ctx.beginPath();
+      ctx.arc(n.x * w, n.y * h, n.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'oklch(66% 0.19 230 / 0.5)';
+      ctx.fill();
+    }
+
+    raf = requestAnimationFrame(draw);
+  }
+  draw();
+
+  // pause when tab hidden
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) cancelAnimationFrame(raf);
+    else draw();
+  });
+})();
+
+// ── SCROLL REVEAL ───────────────────────────────────────────
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => observer.observe(el));
+
+// ── PROJECT CARDS ───────────────────────────────────────────
+function toggleProject(card) {
+  const details = card.querySelector('.project-details');
+  const isOpen = card.classList.contains('open');
+  // close all
+  document.querySelectorAll('.project-card.open').forEach(c => {
+    c.classList.remove('open');
+    c.querySelector('.project-details').classList.remove('open');
+  });
+  if (!isOpen) {
+    card.classList.add('open');
+    details.classList.add('open');
+  }
+}
+</script>
+</body>
+</html>

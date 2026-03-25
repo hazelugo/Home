@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="color-scheme: light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -210,6 +210,7 @@
         height: 44px;
         align-items: center;
         justify-content: center;
+        touch-action: manipulation;
       }
       .nav-menu-btn span {
         display: block;
@@ -644,6 +645,12 @@
       .project-item {
         border-top: 1px solid var(--border);
         cursor: pointer;
+        width: 100%;
+        text-align: left;
+        background: none;
+        font: inherit;
+        color: inherit;
+        padding: 0;
       }
       .project-item:last-child {
         border-bottom: 1px solid var(--border);
@@ -1402,13 +1409,11 @@
             <h2 class="section-heading">Hands-on projects.</h2>
           </div>
           <div class="projects-list">
-            <div
+            <button
+              type="button"
               class="project-item reveal"
-              role="button"
-              tabindex="0"
               aria-expanded="false"
               onclick="toggleProject(this)"
-              onkeydown="handleProjectKey(event, this)"
             >
               <div class="project-row">
                 <span class="project-num" aria-hidden="true">01</span>
@@ -1444,15 +1449,13 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
 
-            <div
+            <button
+              type="button"
               class="project-item reveal reveal-d1"
-              role="button"
-              tabindex="0"
               aria-expanded="false"
               onclick="toggleProject(this)"
-              onkeydown="handleProjectKey(event, this)"
             >
               <div class="project-row">
                 <span class="project-num" aria-hidden="true">02</span>
@@ -1487,15 +1490,13 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
 
-            <div
+            <button
+              type="button"
               class="project-item reveal reveal-d2"
-              role="button"
-              tabindex="0"
               aria-expanded="false"
               onclick="toggleProject(this)"
-              onkeydown="handleProjectKey(event, this)"
             >
               <div class="project-row">
                 <span class="project-num" aria-hidden="true">03</span>
@@ -1528,15 +1529,13 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
 
-            <div
+            <button
+              type="button"
               class="project-item reveal reveal-d1"
-              role="button"
-              tabindex="0"
               aria-expanded="false"
               onclick="toggleProject(this)"
-              onkeydown="handleProjectKey(event, this)"
             >
               <div class="project-row">
                 <span class="project-num" aria-hidden="true">04</span>
@@ -1571,15 +1570,13 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
 
-            <div
+            <button
+              type="button"
               class="project-item reveal reveal-d2"
-              role="button"
-              tabindex="0"
               aria-expanded="false"
               onclick="toggleProject(this)"
-              onkeydown="handleProjectKey(event, this)"
             >
               <div class="project-row">
                 <span class="project-num" aria-hidden="true">05</span>
@@ -1613,7 +1610,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
         </div>
       </section>

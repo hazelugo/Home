@@ -10,7 +10,10 @@
       "Bash(magick --version)",
       "Bash(npm install:*)",
       "Bash(node -e \":*)",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(npx skills:*)",
+      "WebSearch",
+      "WebFetch(domain:raw.githubusercontent.com)"
     ]
   }
 }

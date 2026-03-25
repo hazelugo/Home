@@ -1,1167 +1,1937 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hector Lugo — Cybersecurity & Network Professional</title>
-<meta name="description" content="Hector Lugo — CompTIA trifecta-certified IT professional based in South Texas. Security+, Network+, A+, ISC2 CC. 6+ years enterprise IT. Open to cybersecurity analyst and network administrator roles.">
-<meta property="og:title" content="Hector Lugo — Cybersecurity & Network Professional">
-<meta property="og:description" content="CompTIA trifecta-certified. 6+ years enterprise IT. Graduating May 2026. Open to remote and South Texas opportunities.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://hazelugo.com/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:type" content="image/png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://hazelugo.com/og-image.png">
-<meta name="theme-color" content="#f7f5ef">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23f7f5ef'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='16' fill='%232338c8'%3EHL%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hector Lugo — Cybersecurity & Network Professional</title>
+    <meta
+      name="description"
+      content="Hector Lugo — CompTIA trifecta-certified IT professional based in South Texas. Security+, Network+, A+, ISC2 CC. 6+ years enterprise IT. Open to cybersecurity analyst and network administrator roles."
+    />
+    <meta
+      property="og:title"
+      content="Hector Lugo — Cybersecurity & Network Professional"
+    />
+    <meta
+      property="og:description"
+      content="CompTIA trifecta-certified. 6+ years enterprise IT. Graduating May 2026. Open to remote and South Texas opportunities."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://hazelugo.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://hazelugo.com/og-image.png" />
+    <meta name="theme-color" content="#f7f5ef" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23f7f5ef'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='16' fill='%232338c8'%3EHL%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-:root {
-  --bg:           oklch(97% 0.009 75);
-  --bg-2:         oklch(94% 0.012 75);
-  --bg-3:         oklch(91% 0.015 75);
-  --text:         oklch(17% 0.015 258);
-  --text-dim:     oklch(46% 0.018 258);
-  --text-muted:   oklch(55% 0.013 258);
-  --accent:       oklch(46% 0.22 258);
-  --accent-mid:   oklch(52% 0.21 258);
-  --accent-tint:  oklch(93% 0.06 258);
-  --accent-2:     oklch(60% 0.14 65);
-  --green:        oklch(52% 0.16 145);
-  --green-tint:   oklch(92% 0.07 145);
-  --border:       oklch(87% 0.013 258);
-  --border-2:     oklch(80% 0.018 258);
-  --nav-bg:       oklch(97% 0.009 75 / 0.92);
-  --radius:       3px;
-  --font-display: 'Bricolage Grotesque', sans-serif;
-  --font-body:    'Geist', sans-serif;
-  --font-mono:    'Geist Mono', monospace;
-  --sidebar-width: 220px;
-}
+      :root {
+        --bg: oklch(97% 0.009 75);
+        --bg-2: oklch(94% 0.012 75);
+        --bg-3: oklch(91% 0.015 75);
+        --text: oklch(17% 0.015 258);
+        --text-dim: oklch(46% 0.018 258);
+        --text-muted: oklch(55% 0.013 258);
+        --accent: oklch(46% 0.22 258);
+        --accent-mid: oklch(52% 0.21 258);
+        --accent-tint: oklch(93% 0.06 258);
+        --accent-2: oklch(60% 0.14 65);
+        --green: oklch(52% 0.16 145);
+        --green-tint: oklch(92% 0.07 145);
+        --border: oklch(87% 0.013 258);
+        --border-2: oklch(80% 0.018 258);
+        --nav-bg: oklch(97% 0.009 75 / 0.92);
+        --radius: 3px;
+        --font-display: "Bricolage Grotesque", sans-serif;
+        --font-body: "Geist", sans-serif;
+        --font-mono: "Geist Mono", monospace;
+        --sidebar-width: 220px;
+        --tag-network-bg: oklch(93% 0.07 65);
+        --tag-network-text: oklch(48% 0.14 55);
+        --tag-siem-bg: oklch(91% 0.07 290);
+        --tag-siem-text: oklch(44% 0.16 290);
+        --tag-av-bg: oklch(92% 0.07 145);
+        --tag-av-text: oklch(42% 0.15 145);
+      }
 
-html { scroll-behavior: smooth; }
+      html {
+        scroll-behavior: smooth;
+      }
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.65;
-  overflow-x: hidden;
-}
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 1.65;
+        overflow-x: hidden;
+      }
 
-/* ─── SIDEBAR ───────────────────────────────────────── */
-.sidebar {
-  position: fixed; left: 0; top: 0; bottom: 0;
-  width: var(--sidebar-width); z-index: 100;
-  background: var(--bg-2);
-  border-right: 1px solid var(--border);
-  display: flex; flex-direction: column;
-  overflow-y: auto;
-  transition: transform 0.3s ease;
-}
-.sidebar-header {
-  border-bottom: 1px solid var(--border);
-  padding: 0.75rem 0.75rem;
-  flex-shrink: 0;
-}
-.sidebar-brand {
-  font-family: var(--font-mono);
-  font-size: 0.7rem; font-weight: 600;
-  letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--text-muted);
-  text-decoration: none; display: block;
-}
-.sidebar-nav { flex: 1; padding: 0.35rem 0; }
-.sidebar-nav ul { list-style: none; display: flex; flex-direction: column; gap: 0; }
-.sidebar-item {
-  display: flex; align-items: center; gap: 0.625rem;
-  height: 44px; padding: 0 0.75rem;
-  font-size: 0.7rem; font-weight: 500;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--text-dim); text-decoration: none;
-  border-left: 2px solid transparent;
-  transition: background 0.1s, border-color 0.1s, color 0.1s;
-}
-.sidebar-item:hover {
-  background: var(--bg-3);
-  border-left-color: var(--accent);
-  color: var(--text);
-}
-.sidebar-item.active {
-  border-left-color: var(--accent);
-  background: var(--bg-3);
-  color: var(--text);
-}
-.sidebar-footer {
-  border-top: 1px solid var(--border);
-  padding: 0.35rem 0 0.75rem;
-  flex-shrink: 0;
-}
-.sidebar-email {
-  padding: 0.5rem 0.75rem 0.35rem;
-  font-size: 0.625rem;
-  font-family: var(--font-mono);
-  color: var(--text-muted);
-  letter-spacing: 0.04em;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
-.sidebar-cta-btn {
-  display: flex; align-items: center;
-  height: 32px; padding: 0 0.75rem;
-  font-size: 0.7rem; font-weight: 600;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--text-dim); text-decoration: none;
-  border-left: 2px solid transparent;
-  transition: background 0.1s, color 0.1s, border-color 0.1s;
-}
-.sidebar-cta-btn:hover {
-  background: var(--bg-3);
-  color: var(--accent);
-  border-left-color: var(--accent);
-}
+      /* ─── SIDEBAR ───────────────────────────────────────── */
+      .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: var(--sidebar-width);
+        z-index: 100;
+        background: var(--bg-2);
+        border-right: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        transition: transform 0.3s ease;
+      }
+      .sidebar-header {
+        border-bottom: 1px solid var(--border);
+        padding: 0.75rem;
+        flex-shrink: 0;
+      }
+      .sidebar-brand {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        text-decoration: none;
+        display: block;
+      }
+      .sidebar-nav {
+        flex: 1;
+        padding: 0.35rem 0;
+      }
+      .sidebar-nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .sidebar-item {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+        height: 44px;
+        padding: 0 0.75rem;
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-dim);
+        text-decoration: none;
+        border-left: 2px solid transparent;
+        transition:
+          background 0.1s,
+          border-color 0.1s,
+          color 0.1s;
+      }
+      .sidebar-item:hover {
+        background: var(--bg-3);
+        border-left-color: var(--accent);
+        color: var(--text);
+      }
+      .sidebar-item.active {
+        border-left-color: var(--accent);
+        background: var(--bg-3);
+        color: var(--text);
+      }
+      .sidebar-footer {
+        border-top: 1px solid var(--border);
+        padding: 0.35rem 0 0.75rem;
+        flex-shrink: 0;
+      }
+      .sidebar-email {
+        padding: 0.5rem 0.75rem 0.35rem;
+        font-size: 0.67rem;
+        font-family: var(--font-mono);
+        color: var(--text-muted);
+        letter-spacing: 0.04em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .sidebar-cta-btn {
+        display: flex;
+        align-items: center;
+        height: 32px;
+        padding: 0 0.75rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-dim);
+        text-decoration: none;
+        border-left: 2px solid transparent;
+        transition:
+          background 0.1s,
+          color 0.1s,
+          border-color 0.1s;
+      }
+      .sidebar-cta-btn:hover {
+        background: var(--bg-3);
+        color: var(--accent);
+        border-left-color: var(--accent);
+      }
 
-/* Mobile toggle button */
-.nav-menu-btn {
-  display: none; position: fixed; top: 0.85rem; left: 0.85rem; z-index: 200;
-  background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius);
-  cursor: pointer; flex-direction: column; gap: 5px; padding: 0;
-  width: 44px; height: 44px;
-  align-items: center; justify-content: center;
-}
-.nav-menu-btn span {
-  display: block; width: 22px; height: 2px;
-  background: var(--text); border-radius: 2px;
-  transition: transform 0.3s, opacity 0.3s;
-}
+      /* Mobile toggle button */
+      .nav-menu-btn {
+        display: none;
+        position: fixed;
+        top: 0.85rem;
+        left: 0.85rem;
+        z-index: 200;
+        background: var(--bg-2);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+        padding: 0;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+      }
+      .nav-menu-btn span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: var(--text);
+        border-radius: 2px;
+        transition:
+          transform 0.3s,
+          opacity 0.3s;
+      }
 
-/* ─── MAIN LAYOUT ───────────────────────────────────── */
-main { margin-left: var(--sidebar-width); }
+      /* ─── MAIN LAYOUT ───────────────────────────────────── */
+      main {
+        margin-left: var(--sidebar-width);
+      }
 
-/* ─── HERO ─────────────────────────────────────────── */
-#hero {
-  min-height: 100svh;
-  padding: 6rem 2.5rem 5rem;
-  display: flex; flex-direction: column; justify-content: center;
-  border-bottom: 1px solid var(--border);
-}
-.hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; }
+      /* ─── HERO ─────────────────────────────────────────── */
+      #hero {
+        min-height: 100svh;
+        padding: 6rem 2.5rem 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-bottom: 1px solid var(--border);
+      }
+      .hero-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+      }
 
-.hero-name-block {
-  position: relative;
-  border-bottom: 1.5px solid var(--text);
-  padding-bottom: 1.25rem;
-  margin-bottom: 1.75rem;
-}
-.hero-name {
-  font-family: var(--font-display);
-  font-size: clamp(4.5rem, 13vw, 10.5rem);
-  font-weight: 800;
-  line-height: 0.9;
-  letter-spacing: -0.03em;
-  color: var(--text);
-}
-.hero-name .last { color: var(--accent); }
-.hero-open {
-  position: absolute; bottom: 1.25rem; right: 0;
-  display: flex; align-items: center; gap: 0.45rem;
-  font-size: 0.7rem; font-weight: 700;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--green);
-}
-.pulse-dot {
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--green); position: relative; flex-shrink: 0;
-}
-.pulse-dot::after {
-  content: ''; position: absolute; inset: -3px;
-  border-radius: 50%; background: oklch(52% 0.16 145 / 0.28);
-  animation: pulse 2s ease-in-out infinite;
-}
-@keyframes pulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50%       { transform: scale(1.6); opacity: 0; }
-}
+      .hero-name-block {
+        position: relative;
+        border-bottom: 1.5px solid var(--text);
+        padding-bottom: 1.25rem;
+        margin-bottom: 1.75rem;
+      }
+      .hero-name {
+        font-family: var(--font-display);
+        font-size: clamp(4.5rem, 13vw, 10.5rem);
+        font-weight: 800;
+        line-height: 0.9;
+        letter-spacing: -0.03em;
+        color: var(--text);
+      }
+      .hero-name .last {
+        color: var(--accent);
+      }
+      .hero-open {
+        position: absolute;
+        bottom: 1.25rem;
+        right: 0;
+        display: flex;
+        align-items: center;
+        gap: 0.45rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--green);
+      }
+      .pulse-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--green);
+        position: relative;
+        flex-shrink: 0;
+      }
+      .pulse-dot::after {
+        content: "";
+        position: absolute;
+        inset: -3px;
+        border-radius: 50%;
+        background: oklch(52% 0.16 145 / 0.28);
+        animation: pulse 2s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.6);
+          opacity: 0;
+        }
+      }
 
-.hero-meta-row {
-  display: flex; justify-content: space-between;
-  align-items: flex-start; gap: 2.5rem;
-  margin-bottom: 2.5rem;
-  flex-wrap: wrap;
-}
-.hero-role {
-  font-family: var(--font-display);
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  font-weight: 600; letter-spacing: -0.01em;
-  color: var(--text); margin-bottom: 0.2rem;
-}
-.hero-sub {
-  font-size: 0.86rem; color: var(--text-dim); font-weight: 400;
-}
-.hero-certs {
-  display: flex; gap: 0.45rem; flex-wrap: wrap; align-items: center;
-}
-.cert-chip {
-  font-family: var(--font-mono);
-  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: 0.25rem 0.65rem;
-  border: 1.5px solid var(--border-2);
-  border-radius: 2px; color: var(--text-dim);
-}
-.hero-desc {
-  max-width: 600px;
-  font-size: 1.04rem; line-height: 1.72;
-  color: var(--text-muted); margin-bottom: 2.5rem;
-}
-.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
-.btn-primary {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  background: var(--accent); color: var(--bg);
-  font-family: var(--font-body); font-size: 0.83rem;
-  font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
-  padding: 0.85rem 2rem; border-radius: var(--radius);
-  text-decoration: none; border: none; cursor: pointer;
-  transition: background 0.15s, transform 0.15s;
-}
-.btn-primary:hover { background: var(--accent-mid); transform: translateY(-1px); }
-.btn-ghost {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  background: transparent; color: var(--text-dim);
-  font-family: var(--font-body); font-size: 0.83rem;
-  font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;
-  padding: 0.85rem 2rem; border-radius: var(--radius);
-  text-decoration: none; border: 1.5px solid var(--border-2);
-  cursor: pointer; transition: color 0.15s, border-color 0.15s;
-}
-.btn-ghost:hover { color: var(--text); border-color: var(--text-muted); }
+      .hero-meta-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2.5rem;
+        margin-bottom: 2.5rem;
+        flex-wrap: wrap;
+      }
+      .hero-role {
+        font-family: var(--font-display);
+        font-size: clamp(1rem, 2vw, 1.3rem);
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        color: var(--text);
+        margin-bottom: 0.2rem;
+      }
+      .hero-sub {
+        font-size: 0.875rem;
+        color: var(--text-dim);
+        font-weight: 400;
+      }
+      .hero-certs {
+        display: flex;
+        gap: 0.45rem;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .cert-chip {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 0.25rem 0.65rem;
+        border: 1.5px solid var(--border-2);
+        border-radius: 2px;
+        color: var(--text-dim);
+      }
+      .hero-desc {
+        max-width: 600px;
+        font-size: 1.04rem;
+        line-height: 1.72;
+        color: var(--text-muted);
+        margin-bottom: 2.5rem;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--accent);
+        color: var(--bg);
+        font-family: var(--font-body);
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 0.85rem 2rem;
+        border-radius: var(--radius);
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition:
+          background 0.15s,
+          transform 0.15s;
+      }
+      .btn-primary:hover {
+        background: var(--accent-mid);
+        transform: translateY(-1px);
+      }
+      .btn-ghost {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: transparent;
+        color: var(--text-dim);
+        font-family: var(--font-body);
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 0.85rem 2rem;
+        border-radius: var(--radius);
+        text-decoration: none;
+        border: 1.5px solid var(--border-2);
+        cursor: pointer;
+        transition:
+          color 0.15s,
+          border-color 0.15s;
+      }
+      .btn-ghost:hover {
+        color: var(--text);
+        border-color: var(--text-muted);
+      }
 
-/* ─── CERTS STRIP ───────────────────────────────────── */
-#certifications { border-bottom: 1px solid var(--border); }
-.certs-strip {
-  max-width: 1200px; margin: 0 auto;
-  display: flex; align-items: stretch;
-  overflow-x: auto; -webkit-overflow-scrolling: touch;
-}
-.cert-item {
-  flex: 1; min-width: 155px;
-  padding: 1.75rem 2rem;
-  border-right: 1px solid var(--border);
-  display: flex; flex-direction: column; justify-content: center;
-}
-.cert-item:last-of-type { border-right: none; }
-.cert-name {
-  font-family: var(--font-display);
-  font-size: 1.05rem; font-weight: 700;
-  color: var(--text); margin-bottom: 0.2rem;
-}
-.cert-org {
-  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--text-dim);
-}
-.cert-status-col {
-  padding: 1.75rem 2rem; flex-shrink: 0;
-  border-left: 1px solid var(--border);
-  display: flex; align-items: center; gap: 0.5rem;
-  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--green);
-  background: var(--green-tint);
-  white-space: nowrap;
-}
-.cert-dot {
-  width: 7px; height: 7px; border-radius: 50%;
-  background: var(--green); flex-shrink: 0;
-}
+      /* ─── CERTS STRIP ───────────────────────────────────── */
+      #certifications {
+        border-bottom: 1px solid var(--border);
+      }
+      .certs-strip {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: stretch;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .cert-item {
+        flex: 1;
+        min-width: 155px;
+        padding: 1.75rem 2rem;
+        border-right: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .cert-item:last-of-type {
+        border-right: none;
+      }
+      .cert-name {
+        font-family: var(--font-display);
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 0.2rem;
+      }
+      .cert-org {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-dim);
+      }
+      .cert-status-col {
+        padding: 1.75rem 2rem;
+        flex-shrink: 0;
+        border-left: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--green);
+        background: var(--green-tint);
+        white-space: nowrap;
+      }
+      .cert-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--green);
+        flex-shrink: 0;
+      }
 
-/* ─── SHARED SECTION ────────────────────────────────── */
-.section { padding: clamp(4rem, 8vw, 7rem) 2.5rem; border-bottom: 1px solid var(--border); }
-.section-alt { background: var(--bg-2); }
-.container { max-width: 1200px; margin: 0 auto; }
-.section-header {
-  display: flex; align-items: baseline; gap: 1.25rem;
-  margin-bottom: clamp(2.5rem, 5vw, 4rem);
-}
-.section-num {
-  font-family: var(--font-display);
-  font-size: 0.75rem; font-weight: 800;
-  letter-spacing: 0.12em; color: var(--accent);
-  flex-shrink: 0; padding-top: 0.35rem;
-}
-.section-heading {
-  font-family: var(--font-display);
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-  font-weight: 800; line-height: 1.05;
-  letter-spacing: -0.025em; color: var(--text);
-}
-.section-heading em { font-style: normal; color: var(--accent); }
+      /* ─── SHARED SECTION ────────────────────────────────── */
+      .section {
+        padding: clamp(4rem, 8vw, 7rem) 2.5rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .section-alt {
+        background: var(--bg-2);
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .section-header {
+        display: flex;
+        align-items: baseline;
+        gap: 1.25rem;
+        margin-bottom: clamp(2.5rem, 5vw, 4rem);
+      }
+      .section-num {
+        font-family: var(--font-display);
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        color: var(--text-muted);
+        flex-shrink: 0;
+        padding-top: 0.35rem;
+      }
+      #contact .section-header {
+        margin-bottom: 1rem;
+      }
+      .section-heading {
+        font-family: var(--font-display);
+        font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+        font-weight: 800;
+        line-height: 1.05;
+        letter-spacing: -0.025em;
+        color: var(--text);
+      }
+      .section-heading em {
+        font-style: normal;
+        color: var(--accent);
+      }
 
-/* ─── ABOUT ─────────────────────────────────────────── */
-.about-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 5rem; align-items: start;
-}
-.about-text p {
-  color: var(--text-muted); margin-bottom: 1.25rem;
-  font-size: 1.02rem;
-}
-.about-text p strong { color: var(--text); font-weight: 600; }
-.about-highlights {
-  margin-top: 2rem; padding-top: 2rem;
-  border-top: 1px solid var(--border);
-  display: flex; flex-direction: column; gap: 1.2rem;
-}
-.highlight-item { display: flex; align-items: flex-start; gap: 1rem; }
-.highlight-num {
-  font-family: var(--font-display);
-  font-size: 0.68rem; font-weight: 800;
-  letter-spacing: 0.1em; color: var(--accent);
-  flex-shrink: 0; padding-top: 0.1rem;
-}
-.highlight-text strong {
-  display: block; font-size: 0.9rem; font-weight: 600;
-  color: var(--text); margin-bottom: 0.1rem;
-}
-.highlight-text span { font-size: 0.82rem; color: var(--text-dim); }
-.about-side { display: flex; flex-direction: column; }
-.info-block {
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--border);
-}
-.info-block:first-child { padding-top: 0; }
-.info-block-title {
-  font-family: var(--font-mono);
-  font-size: 0.625rem; font-weight: 600; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--accent);
-  margin-bottom: 0.9rem;
-}
-.info-row {
-  display: flex; justify-content: space-between; align-items: baseline;
-  padding: 0.35rem 0; font-size: 0.88rem;
-}
-.info-row .key { color: var(--text-dim); font-weight: 400; }
-.info-row .val { color: var(--text); font-weight: 500; text-align: right; }
-.edu-degree { font-size: 0.9rem; font-weight: 600; color: var(--text); margin-bottom: 0.15rem; }
-.edu-school  { font-size: 0.86rem; color: var(--text-dim); margin-bottom: 0.4rem; }
-.edu-badge {
-  display: inline-block;
-  font-size: 0.67rem; font-weight: 700; letter-spacing: 0.08em;
-  text-transform: uppercase; color: var(--accent-2);
-  padding: 0.2rem 0.55rem;
-  border: 1px solid oklch(60% 0.14 65 / 0.4);
-  border-radius: 2px;
-}
+      /* ─── ABOUT ─────────────────────────────────────────── */
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: start;
+      }
+      .about-text p {
+        color: var(--text-muted);
+        margin-bottom: 1.25rem;
+        font-size: 1.02rem;
+      }
+      .about-text p strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+      .about-highlights {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+      .highlight-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      .highlight-num {
+        font-family: var(--font-display);
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        color: var(--border-2);
+        flex-shrink: 0;
+        padding-top: 0.1rem;
+      }
+      .highlight-text strong {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 0.1rem;
+      }
+      .highlight-text span {
+        font-size: 0.875rem;
+        color: var(--text-dim);
+      }
+      .about-side {
+        display: flex;
+        flex-direction: column;
+      }
+      .info-block {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .info-block:first-child {
+        padding-top: 0;
+      }
+      .info-block-title {
+        font-family: var(--font-mono);
+        font-size: 0.67rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 0.9rem;
+      }
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 0.35rem 0;
+        font-size: 0.875rem;
+      }
+      .info-row .key {
+        color: var(--text-dim);
+        font-weight: 400;
+      }
+      .info-row .val {
+        color: var(--text);
+        font-weight: 500;
+        text-align: right;
+      }
+      .edu-degree {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 0.15rem;
+      }
+      .edu-school {
+        font-size: 0.875rem;
+        color: var(--text-dim);
+        margin-bottom: 0.4rem;
+      }
+      .edu-badge {
+        display: inline-block;
+        font-size: 0.67rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent-2);
+        padding: 0.2rem 0.55rem;
+        border: 1px solid oklch(60% 0.14 65 / 0.4);
+        border-radius: 2px;
+      }
 
-/* ─── SKILLS ────────────────────────────────────────── */
-.skills-table { width: 100%; }
-.skill-row {
-  display: grid; grid-template-columns: 190px 1fr;
-  gap: 2.5rem; align-items: baseline;
-  padding: 1.25rem 0;
-  border-bottom: 1px solid var(--border);
-}
-.skill-row:first-child { border-top: 1px solid var(--border); }
-.skill-category {
-  font-family: var(--font-mono);
-  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--accent-2);
-}
-.skill-list {
-  font-size: 0.92rem; color: var(--text-muted);
-  line-height: 1.65;
-}
+      /* ─── SKILLS ────────────────────────────────────────── */
+      .skills-table {
+        width: 100%;
+      }
+      .skill-row {
+        display: grid;
+        grid-template-columns: 190px 1fr;
+        gap: 2.5rem;
+        align-items: baseline;
+        padding: 1.25rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .skill-row:first-child {
+        border-top: 1px solid var(--border);
+      }
+      .skill-category {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--accent-2);
+      }
+      .skill-list {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+      }
 
-/* ─── PROJECTS ──────────────────────────────────────── */
-.project-item {
-  border-top: 1px solid var(--border);
-  cursor: pointer;
-}
-.project-item:last-child { border-bottom: 1px solid var(--border); }
-.project-row {
-  display: grid;
-  grid-template-columns: 2.25rem 1fr auto auto;
-  gap: 1.5rem; align-items: center;
-  padding: 1.2rem 0;
-}
-.project-item.open .project-row { padding-bottom: 0.5rem; }
-.project-num {
-  font-family: var(--font-display);
-  font-size: 0.75rem; font-weight: 800;
-  letter-spacing: 0.05em; color: var(--border-2);
-  transition: color 0.2s;
-}
-.project-item:hover .project-num,
-.project-item.open  .project-num { color: var(--accent); }
-.project-name {
-  font-family: var(--font-display);
-  font-size: 1.05rem; font-weight: 700; color: var(--text);
-  margin-bottom: 0.15rem; line-height: 1.2;
-}
-.project-summary {
-  font-size: 0.82rem; color: var(--text-dim); line-height: 1.4;
-}
-.project-tag {
-  font-size: 0.63rem; font-weight: 700; letter-spacing: 0.1em;
-  text-transform: uppercase; padding: 0.2rem 0.6rem;
-  border-radius: 2px; flex-shrink: 0; white-space: nowrap;
-}
-.tag-security { background: var(--accent-tint); color: var(--accent); }
-.tag-network  { background: oklch(93% 0.07 65);  color: oklch(48% 0.14 55); }
-.tag-siem     { background: oklch(91% 0.07 290); color: oklch(44% 0.16 290); }
-.tag-av       { background: oklch(92% 0.07 145); color: oklch(42% 0.15 145); }
-.project-toggle {
-  width: 28px; height: 28px; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  border: 1.5px solid var(--border-2); border-radius: 50%;
-  color: var(--text-dim); font-size: 1rem; line-height: 1;
-  transition: transform 0.25s, border-color 0.25s, color 0.25s;
-  pointer-events: none; user-select: none;
-}
-.project-item.open .project-toggle {
-  transform: rotate(45deg);
-  border-color: var(--accent); color: var(--accent);
-}
-.project-expand {
-  display: grid; grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s ease;
-}
-.project-expand.open { grid-template-rows: 1fr; }
-.project-expand-inner { overflow: hidden; }
-.project-detail {
-  padding: 0.25rem 0 1.75rem 3.75rem;
-}
-.project-detail-text {
-  font-size: 0.9rem; color: var(--text-muted);
-  line-height: 1.72; margin-bottom: 1.1rem;
-  max-width: 680px;
-}
-.project-tools { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.tool-chip {
-  font-size: 0.67rem; font-weight: 600; letter-spacing: 0.06em;
-  text-transform: uppercase; padding: 0.2rem 0.55rem;
-  border: 1px solid var(--border-2); border-radius: 2px;
-  color: var(--text-dim); background: var(--bg-3);
-}
+      /* ─── PROJECTS ──────────────────────────────────────── */
+      .project-item {
+        border-top: 1px solid var(--border);
+        cursor: pointer;
+      }
+      .project-item:last-child {
+        border-bottom: 1px solid var(--border);
+      }
+      .project-row {
+        display: grid;
+        grid-template-columns: 2.25rem 1fr auto auto;
+        gap: 1.5rem;
+        align-items: center;
+        padding: 1.2rem 0;
+      }
+      .project-item.open .project-row {
+        padding-bottom: 0.5rem;
+      }
+      .project-num {
+        font-family: var(--font-display);
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        color: var(--border-2);
+        transition: color 0.2s;
+      }
+      .project-item:hover .project-num,
+      .project-item.open .project-num {
+        color: var(--accent);
+      }
+      .project-name {
+        font-family: var(--font-display);
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 0.15rem;
+        line-height: 1.2;
+      }
+      .project-summary {
+        font-size: 0.875rem;
+        color: var(--text-dim);
+        line-height: 1.4;
+      }
+      .project-tag {
+        font-size: 0.67rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 0.2rem 0.6rem;
+        border-radius: 2px;
+        flex-shrink: 0;
+        white-space: nowrap;
+      }
+      .tag-security {
+        background: var(--accent-tint);
+        color: var(--accent);
+      }
+      .tag-network {
+        background: var(--tag-network-bg);
+        color: var(--tag-network-text);
+      }
+      .tag-siem {
+        background: var(--tag-siem-bg);
+        color: var(--tag-siem-text);
+      }
+      .tag-av {
+        background: var(--tag-av-bg);
+        color: var(--tag-av-text);
+      }
+      .project-toggle {
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1.5px solid var(--border-2);
+        border-radius: 50%;
+        color: var(--text-dim);
+        font-size: 1rem;
+        line-height: 1;
+        transition:
+          transform 0.25s,
+          border-color 0.25s,
+          color 0.25s;
+        pointer-events: none;
+        user-select: none;
+      }
+      .project-item.open .project-toggle {
+        transform: rotate(45deg);
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+      .project-expand {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.3s ease;
+      }
+      .project-expand.open {
+        grid-template-rows: 1fr;
+      }
+      .project-expand-inner {
+        overflow: hidden;
+      }
+      .project-detail {
+        padding: 0.25rem 0 1.75rem 3.75rem;
+      }
+      .project-detail-text {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        line-height: 1.72;
+        margin-bottom: 1.1rem;
+        max-width: 680px;
+      }
+      .project-tools {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+      }
+      .tool-chip {
+        font-size: 0.67rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 0.2rem 0.55rem;
+        border: 1px solid var(--border-2);
+        border-radius: 2px;
+        color: var(--text-dim);
+        background: var(--bg-3);
+      }
 
-/* ─── EXPERIENCE ────────────────────────────────────── */
-.timeline-entry {
-  display: grid; grid-template-columns: 190px 1fr;
-  gap: 3.5rem; padding: 2.5rem 0;
-  border-bottom: 1px solid var(--border);
-}
-.timeline-entry:first-child { border-top: 1px solid var(--border); }
-.timeline-period {
-  font-family: var(--font-mono);
-  font-size: 0.68rem; font-weight: 500; letter-spacing: 0.06em;
-  text-transform: uppercase; color: var(--accent-2);
-  line-height: 1.4; margin-bottom: 0.35rem;
-}
-.timeline-org {
-  font-size: 0.83rem; color: var(--text-dim); line-height: 1.35;
-}
-.timeline-role {
-  font-family: var(--font-display);
-  font-size: 1.2rem; font-weight: 700;
-  color: var(--text); margin-bottom: 1.1rem;
-  letter-spacing: -0.01em;
-}
-.timeline-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-.timeline-bullets li {
-  font-size: 0.9rem; color: var(--text-muted);
-  padding-left: 1.25rem; position: relative; line-height: 1.6;
-}
-.timeline-bullets li::before {
-  content: '—'; position: absolute; left: 0;
-  color: var(--border-2); font-size: 0.8rem; top: 0.05em;
-}
+      /* ─── EXPERIENCE ────────────────────────────────────── */
+      .timeline-entry {
+        display: grid;
+        grid-template-columns: 190px 1fr;
+        gap: 3.5rem;
+        padding: 2.5rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .timeline-entry:first-child {
+        border-top: 1px solid var(--border);
+      }
+      .timeline-period {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--accent-2);
+        line-height: 1.4;
+        margin-bottom: 0.35rem;
+      }
+      .timeline-org {
+        font-size: 0.875rem;
+        color: var(--text-dim);
+        line-height: 1.35;
+      }
+      .timeline-role {
+        font-family: var(--font-display);
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 1.1rem;
+        letter-spacing: -0.01em;
+      }
+      .timeline-bullets {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .timeline-bullets li {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        padding-left: 1.25rem;
+        position: relative;
+        line-height: 1.6;
+      }
+      .timeline-bullets li::before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: var(--border-2);
+        font-size: 0.8rem;
+        top: 0.05em;
+      }
 
-/* ─── COMING SOON ───────────────────────────────────── */
-.placeholder-block {
-  border: 1.5px dashed var(--border-2);
-  border-radius: var(--radius);
-  padding: 4rem 2.5rem; text-align: center;
-}
-.placeholder-symbol {
-  font-family: var(--font-display);
-  font-size: 3.5rem; font-weight: 800;
-  color: var(--border-2); margin-bottom: 1.2rem;
-  letter-spacing: -0.04em; user-select: none;
-}
-.placeholder-heading {
-  font-family: var(--font-display);
-  font-size: 1.4rem; font-weight: 700;
-  color: var(--text); margin-bottom: 0.6rem;
-}
-.placeholder-sub {
-  font-size: 0.9rem; color: var(--text-dim);
-  max-width: 400px; margin: 0 auto 2rem;
-}
-.subdomain-list { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; }
-.subdomain-pill {
-  font-size: 0.78rem; font-weight: 500;
-  padding: 0.4rem 0.9rem;
-  border: 1px solid var(--border-2); border-radius: 100px;
-  color: var(--text-dim); background: var(--bg-3);
-  display: flex; align-items: center; gap: 0.4rem;
-}
-.subdomain-dot {
-  width: 5px; height: 5px; border-radius: 50%;
-  background: var(--accent-2); opacity: 0.6;
-}
+      /* ─── CONTACT ───────────────────────────────────────── */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: start;
+      }
+      .contact-heading {
+        font-family: var(--font-display);
+        font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+        font-weight: 800;
+        line-height: 1.05;
+        letter-spacing: -0.025em;
+        margin-bottom: 1rem;
+      }
+      .contact-heading em {
+        font-style: normal;
+        color: var(--accent);
+      }
+      .contact-note {
+        font-size: 0.95rem;
+        color: var(--text-dim);
+        margin-bottom: 2rem;
+        line-height: 1.65;
+        max-width: 380px;
+      }
+      .contact-links {
+        display: flex;
+        flex-direction: column;
+      }
+      .contact-link {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        text-decoration: none;
+        padding: 1.1rem 0;
+        border-bottom: 1px solid var(--border);
+        transition: background 0.15s;
+        position: relative;
+      }
+      .contact-link:first-child {
+        border-top: 1px solid var(--border);
+      }
+      .contact-link:hover {
+        background: var(--accent-tint);
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        margin: 0 -0.75rem;
+      }
+      .contact-link-icon {
+        width: 34px;
+        height: 34px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-dim);
+      }
+      .contact-link-icon svg {
+        width: 18px;
+        height: 18px;
+      }
+      .contact-link-label {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--text-dim);
+        margin-bottom: 0.1rem;
+      }
+      .contact-link-val {
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: var(--text);
+      }
+      .contact-avail {
+        padding: 2rem;
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--bg-2);
+      }
+      .avail-label {
+        font-size: 0.67rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--text-dim);
+        margin-bottom: 1rem;
+      }
+      .avail-status {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-family: var(--font-display);
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--green);
+        margin-bottom: 0.75rem;
+      }
+      .avail-note {
+        font-size: 0.875rem;
+        color: var(--text-dim);
+        line-height: 1.62;
+      }
+      .avail-note strong {
+        color: var(--text);
+        font-weight: 500;
+      }
 
-/* ─── CONTACT ───────────────────────────────────────── */
-.contact-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 5rem; align-items: start;
-}
-.contact-heading {
-  font-family: var(--font-display);
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-  font-weight: 800; line-height: 1.05;
-  letter-spacing: -0.025em; margin-bottom: 1rem;
-}
-.contact-heading em { font-style: normal; color: var(--accent); }
-.contact-note {
-  font-size: 0.95rem; color: var(--text-dim);
-  margin-bottom: 2rem; line-height: 1.65; max-width: 380px;
-}
-.contact-links { display: flex; flex-direction: column; }
-.contact-link {
-  display: flex; align-items: center; gap: 1.25rem;
-  text-decoration: none;
-  padding: 1.1rem 0; border-bottom: 1px solid var(--border);
-  transition: background 0.15s;
-  position: relative;
-}
-.contact-link:first-child { border-top: 1px solid var(--border); }
-.contact-link:hover { background: var(--accent-tint); padding-left: 0.75rem; padding-right: 0.75rem; margin: 0 -0.75rem; }
-.contact-link-icon {
-  width: 34px; height: 34px; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  color: var(--accent);
-}
-.contact-link-icon svg { width: 18px; height: 18px; }
-.contact-link-label {
-  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--text-dim);
-  margin-bottom: 0.1rem;
-}
-.contact-link-val {
-  font-size: 0.92rem; font-weight: 500; color: var(--text);
-}
-.contact-avail {
-  padding: 2rem;
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--bg-2);
-}
-.avail-label {
-  font-size: 0.67rem; font-weight: 700; letter-spacing: 0.16em;
-  text-transform: uppercase; color: var(--text-dim);
-  margin-bottom: 1rem;
-}
-.avail-status {
-  display: flex; align-items: center; gap: 0.6rem;
-  font-family: var(--font-display);
-  font-size: 1.05rem; font-weight: 700;
-  color: var(--green); margin-bottom: 0.75rem;
-}
-.avail-note {
-  font-size: 0.86rem; color: var(--text-dim); line-height: 1.62;
-}
-.avail-note strong { color: var(--text); font-weight: 500; }
+      /* ─── FOOTER ────────────────────────────────────────── */
+      footer {
+        padding: 1.75rem 2.5rem;
+        background: var(--bg-2);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-size: 0.75rem;
+        color: var(--text-dim);
+      }
+      footer a {
+        color: var(--text-dim);
+        text-decoration: none;
+      }
+      footer a:hover {
+        color: var(--text);
+      }
 
-/* ─── FOOTER ────────────────────────────────────────── */
-footer {
-  padding: 1.75rem 2.5rem;
-  background: var(--bg-2);
-  display: flex; justify-content: space-between; align-items: center;
-  flex-wrap: wrap; gap: 1rem;
-  font-size: 0.78rem; color: var(--text-dim);
-}
-footer a { color: var(--text-dim); text-decoration: none; }
-footer a:hover { color: var(--text); }
+      /* ─── REVEAL ────────────────────────────────────────── */
+      .reveal {
+        opacity: 0;
+        transform: translateY(16px);
+        transition:
+          opacity 0.55s ease,
+          transform 0.55s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+      .reveal-d1 {
+        transition-delay: 0.08s;
+      }
+      .reveal-d2 {
+        transition-delay: 0.16s;
+      }
+      .reveal-d3 {
+        transition-delay: 0.24s;
+      }
+      .reveal-d4 {
+        transition-delay: 0.32s;
+      }
 
-/* ─── REVEAL ────────────────────────────────────────── */
-.reveal {
-  opacity: 0; transform: translateY(16px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
-}
-.reveal.visible { opacity: 1; transform: none; }
-.reveal-d1 { transition-delay: 0.08s; }
-.reveal-d2 { transition-delay: 0.16s; }
-.reveal-d3 { transition-delay: 0.24s; }
-.reveal-d4 { transition-delay: 0.32s; }
+      /* ─── RESPONSIVE ────────────────────────────────────── */
+      @media (max-width: 960px) {
+        .about-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+        .hero-meta-row {
+          flex-direction: column;
+          gap: 1rem;
+        }
+        .timeline-entry {
+          grid-template-columns: 150px 1fr;
+          gap: 2rem;
+        }
+        .skill-row {
+          grid-template-columns: 155px 1fr;
+          gap: 1.5rem;
+        }
+      }
+      @media (max-width: 768px) {
+        .sidebar {
+          transform: translateX(-100%);
+        }
+        .sidebar.open {
+          transform: translateX(0);
+        }
+        .nav-menu-btn {
+          display: flex;
+        }
+        main {
+          margin-left: 0;
+        }
+        #hero {
+          padding: 5rem 1.25rem 3.5rem;
+        }
+        .section {
+          padding: 3.5rem 1.25rem;
+        }
+        .hero-open {
+          position: static;
+          margin-top: 0.75rem;
+        }
+        .skill-row {
+          grid-template-columns: 1fr;
+          gap: 0.35rem;
+          padding: 1rem 0;
+        }
+        .timeline-entry {
+          grid-template-columns: 1fr;
+          gap: 0.4rem;
+        }
+        .project-row {
+          grid-template-columns: 2rem 1fr auto;
+        }
+        .project-detail {
+          padding-left: 2rem;
+        }
+        footer {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
 
-/* ─── RESPONSIVE ────────────────────────────────────── */
-@media (max-width: 960px) {
-  .about-grid,
-  .contact-grid  { grid-template-columns: 1fr; gap: 2.5rem; }
-  .hero-meta-row { flex-direction: column; gap: 1rem; }
-  .timeline-entry { grid-template-columns: 150px 1fr; gap: 2rem; }
-  .skill-row { grid-template-columns: 155px 1fr; gap: 1.5rem; }
-}
-@media (max-width: 768px) {
-  .sidebar { transform: translateX(-100%); }
-  .sidebar.open { transform: translateX(0); }
-  .nav-menu-btn { display: flex; }
-  main { margin-left: 0; }
-  #hero { padding: 5rem 1.25rem 3.5rem; }
-  .section { padding: 3.5rem 1.25rem; }
-  .hero-open { position: static; margin-top: 0.75rem; }
-  .skill-row { grid-template-columns: 1fr; gap: 0.35rem; padding: 1rem 0; }
-  .timeline-entry { grid-template-columns: 1fr; gap: 0.4rem; }
-  .project-row { grid-template-columns: 2rem 1fr auto; }
-  .project-tag { display: none; }
-  .project-detail { padding-left: 2rem; }
-  footer { flex-direction: column; text-align: center; }
-}
+      /* Mobile sidebar overlay */
+      .nav-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 90;
+        background: oklch(17% 0.015 258 / 0.35);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+      }
+      .nav-overlay.open {
+        opacity: 1;
+        pointer-events: all;
+      }
 
-/* Mobile sidebar overlay */
-.nav-overlay {
-  position: fixed; inset: 0; z-index: 90;
-  background: oklch(17% 0.015 258 / 0.35);
-  opacity: 0; pointer-events: none;
-  transition: opacity 0.3s;
-}
-.nav-overlay.open { opacity: 1; pointer-events: all; }
+      /* ─── FOCUS ─────────────────────────────────────────── */
+      :focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: var(--radius);
+      }
+      :focus:not(:focus-visible) {
+        outline: none;
+      }
 
-/* ─── FOCUS ─────────────────────────────────────────── */
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-  border-radius: var(--radius);
-}
-:focus:not(:focus-visible) { outline: none; }
+      /* ─── REDUCED MOTION ────────────────────────────────── */
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+        .reveal {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      }
 
-/* ─── REDUCED MOTION ────────────────────────────────── */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-  .reveal { opacity: 1 !important; transform: none !important; }
-}
-</style>
-</head>
-<body>
-
-<!-- SIDEBAR -->
-<aside class="sidebar" id="sidebar" aria-label="Main navigation">
-  <div class="sidebar-header">
-    <a href="#hero" class="sidebar-brand">H.LUGO</a>
-  </div>
-  <nav class="sidebar-nav">
-    <ul>
-      <li><a href="#about"      class="sidebar-item" data-section="about">About</a></li>
-      <li><a href="#skills"     class="sidebar-item" data-section="skills">Skills</a></li>
-      <li><a href="#projects"   class="sidebar-item" data-section="projects">Projects</a></li>
-      <li><a href="#experience" class="sidebar-item" data-section="experience">Experience</a></li>
-    </ul>
-  </nav>
-  <div class="sidebar-footer">
-    <p class="sidebar-email">haze.lugo@gmail.com</p>
-    <a href="#contact" class="sidebar-cta-btn">Get in Touch</a>
-  </div>
-</aside>
-
-<!-- Mobile toggle -->
-<button class="nav-menu-btn" id="menuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar">
-  <span></span><span></span><span></span>
-</button>
-<div class="nav-overlay" id="navOverlay"></div>
-
-<main>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-inner">
-    <div class="hero-name-block reveal">
-      <h1 class="hero-name">Hector<br><span class="last">Lugo</span></h1>
-      <div class="hero-open">
-        <span class="pulse-dot"></span>
-        Open to roles
+      /* Phone display obfuscation */
+      .contact-link-val[data-obfuscate]::after {
+        content: attr(data-obfuscate);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <div class="sidebar-header">
+        <a href="#hero" class="sidebar-brand">H.LUGO</a>
       </div>
-    </div>
-
-    <div class="hero-meta-row">
-      <div class="reveal reveal-d1">
-        <div class="hero-role">Cybersecurity &amp; Network Professional</div>
-        <div class="hero-sub">CompTIA Trifecta Certified &nbsp;·&nbsp; ISC2 CC &nbsp;·&nbsp; South Texas</div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li>
+            <a href="#about" class="sidebar-item" data-section="about">About</a>
+          </li>
+          <li>
+            <a href="#skills" class="sidebar-item" data-section="skills"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="sidebar-item" data-section="projects"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#experience" class="sidebar-item" data-section="experience"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="sidebar-item" data-section="contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <p class="sidebar-email">haze.lugo@gmail.com</p>
+        <a
+          href="resume.pdf"
+          class="sidebar-cta-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Download Resume</a
+        >
       </div>
-      <div class="hero-certs reveal reveal-d2">
-        <span class="cert-chip">Security+</span>
-        <span class="cert-chip">Network+</span>
-        <span class="cert-chip">A+</span>
-        <span class="cert-chip">ISC2 CC</span>
-      </div>
-    </div>
+    </aside>
 
-    <p class="hero-desc reveal reveal-d3">
-      6+ years in enterprise IT, hands-on security lab work, and a graduating B.S. in Computer Information Technology. Bilingual. Mission-focused. Building systems that defend and connect.
-    </p>
+    <!-- Mobile toggle -->
+    <button
+      class="nav-menu-btn"
+      id="menuBtn"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="sidebar"
+    >
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-overlay" id="navOverlay"></div>
 
-    <div class="hero-actions reveal reveal-d4">
-      <a href="#projects" class="btn-primary">
-        View Lab Work
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-      <a href="#contact" class="btn-ghost">Get in Touch</a>
-    </div>
-  </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<div id="certifications" role="region" aria-label="Certifications">
-  <div class="certs-strip reveal">
-    <div class="cert-item">
-      <div class="cert-name">Security+</div>
-      <div class="cert-org">CompTIA</div>
-    </div>
-    <div class="cert-item">
-      <div class="cert-name">Network+</div>
-      <div class="cert-org">CompTIA</div>
-    </div>
-    <div class="cert-item">
-      <div class="cert-name">A+</div>
-      <div class="cert-org">CompTIA</div>
-    </div>
-    <div class="cert-item">
-      <div class="cert-name">Certified in Cybersecurity</div>
-      <div class="cert-org">ISC2 — CC</div>
-    </div>
-    <div class="cert-status-col">
-      <span class="cert-dot"></span>
-      All Active
-    </div>
-  </div>
-</div>
-
-<!-- ABOUT -->
-<section id="about" class="section section-alt">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-num" aria-hidden="true">01</span>
-      <h2 class="section-heading">Defending networks.<br>Building infrastructure.</h2>
-    </div>
-    <div class="about-grid">
-      <div class="about-text">
-        <p class="reveal">
-          I'm an IT professional with a dual focus in <strong>cybersecurity analysis</strong> and <strong>network administration</strong>, grounded in six years of day-to-day enterprise support at Mission CISD — one of the largest school districts in South Texas.
-        </p>
-        <p class="reveal reveal-d1">
-          That environment demands real compliance rigor (FERPA, TEA), fast triage under operational pressure, and the ability to communicate clearly across every level of an organization. I brought that discipline into my home lab, where I've built out vulnerability assessment environments, SIEM pipelines, and segmented network architectures from scratch.
-        </p>
-        <p class="reveal reveal-d2">
-          I'm fluent in English and Spanish, graduating May 2026, and looking to make the full transition into a dedicated security or network role where the work actually matters.
-        </p>
-        <div class="about-highlights reveal reveal-d3">
-          <div class="highlight-item">
-            <span class="highlight-num" aria-hidden="true">01</span>
-            <div class="highlight-text">
-              <strong>Security-first mindset</strong>
-              <span>Threat detection, vulnerability assessment, FERPA/TEA compliance</span>
+    <main>
+      <!-- HERO -->
+      <section id="hero">
+        <div class="hero-inner">
+          <div class="hero-name-block reveal">
+            <h1 class="hero-name">
+              Hector<br /><span class="last">Lugo</span>
+            </h1>
+            <div class="hero-open">
+              <span class="pulse-dot"></span>
+              Open to roles
             </div>
           </div>
-          <div class="highlight-item">
-            <span class="highlight-num" aria-hidden="true">02</span>
-            <div class="highlight-text">
-              <strong>Network architecture &amp; design</strong>
-              <span>VLANs, inter-VLAN routing, firewall policy, VPN tunnels</span>
+
+          <div class="hero-meta-row">
+            <div class="reveal reveal-d1">
+              <div class="hero-role">
+                Cybersecurity &amp; Network Professional
+              </div>
+              <div class="hero-sub">
+                CompTIA Trifecta Certified &nbsp;·&nbsp; ISC2 CC &nbsp;·&nbsp;
+                South Texas
+              </div>
+            </div>
+            <div class="hero-certs reveal reveal-d2">
+              <span class="cert-chip">Security+</span>
+              <span class="cert-chip">Network+</span>
+              <span class="cert-chip">A+</span>
+              <span class="cert-chip">ISC2 CC</span>
             </div>
           </div>
-          <div class="highlight-item">
-            <span class="highlight-num" aria-hidden="true">03</span>
-            <div class="highlight-text">
-              <strong>Bilingual communicator</strong>
-              <span>English &amp; Spanish — technical clarity for any audience</span>
+
+          <p class="hero-desc reveal reveal-d3">
+            6+ years in enterprise IT, hands-on security lab work, and a
+            graduating B.S. in Computer Information Technology. Bilingual.
+            Mission-focused. Building systems that defend and connect.
+          </p>
+
+          <div class="hero-actions reveal reveal-d4">
+            <a href="#projects" class="btn-primary">
+              View Lab Work
+              <svg
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+            <a
+              href="resume.pdf"
+              class="btn-ghost"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Download Resume</a
+            >
+            <a href="#contact" class="btn-ghost">Get in Touch</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS -->
+      <div id="certifications" role="region" aria-label="Certifications">
+        <div class="certs-strip reveal">
+          <div class="cert-item">
+            <div class="cert-name">Security+</div>
+            <div class="cert-org">CompTIA</div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-name">Network+</div>
+            <div class="cert-org">CompTIA</div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-name">A+</div>
+            <div class="cert-org">CompTIA</div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-name">Certified in Cybersecurity</div>
+            <div class="cert-org">ISC2 — CC</div>
+          </div>
+          <div class="cert-status-col">
+            <span class="cert-dot"></span>
+            All Active
+          </div>
+        </div>
+      </div>
+
+      <!-- ABOUT -->
+      <section id="about" class="section section-alt">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-num" aria-hidden="true">01</span>
+            <h2 class="section-heading">
+              Defending networks.<br />Building infrastructure.
+            </h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-text">
+              <p class="reveal">
+                I'm an IT professional with a dual focus in
+                <strong>cybersecurity analysis</strong> and
+                <strong>network administration</strong>, grounded in six years
+                of day-to-day enterprise support at Mission CISD — one of the
+                largest school districts in South Texas.
+              </p>
+              <p class="reveal reveal-d1">
+                That environment demands real compliance rigor (FERPA, TEA),
+                fast triage under operational pressure, and the ability to
+                communicate clearly across every level of an organization. I
+                brought that discipline into my home lab, where I've built out
+                vulnerability assessment environments, SIEM pipelines, and
+                segmented network architectures from scratch.
+              </p>
+              <p class="reveal reveal-d2">
+                I'm fluent in English and Spanish, graduating May 2026, and
+                looking to make the full transition into a dedicated security or
+                network role where the work actually matters.
+              </p>
+              <div class="about-highlights reveal reveal-d3">
+                <div class="highlight-item">
+                  <span class="highlight-num" aria-hidden="true">01</span>
+                  <div class="highlight-text">
+                    <strong>Security-first mindset</strong>
+                    <span
+                      >Threat detection, vulnerability assessment, FERPA/TEA
+                      compliance</span
+                    >
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-num" aria-hidden="true">02</span>
+                  <div class="highlight-text">
+                    <strong>Network architecture &amp; design</strong>
+                    <span
+                      >VLANs, inter-VLAN routing, firewall policy, VPN
+                      tunnels</span
+                    >
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-num" aria-hidden="true">03</span>
+                  <div class="highlight-text">
+                    <strong>Bilingual communicator</strong>
+                    <span
+                      >English &amp; Spanish — technical clarity for any
+                      audience</span
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="about-side reveal reveal-d1">
-        <div class="info-block">
-          <div class="info-block-title">Education</div>
-          <div class="edu-degree">B.A.T. — Computer Information Technology</div>
-          <div class="edu-school">South Texas College</div>
-          <div class="edu-badge">Expected May 2026</div>
-        </div>
-        <div class="info-block">
-          <div class="info-block-title">Focus Areas</div>
-          <div class="info-row"><span class="key">Primary</span><span class="val">Cybersecurity Analysis</span></div>
-          <div class="info-row"><span class="key">Secondary</span><span class="val">Network Administration</span></div>
-          <div class="info-row"><span class="key">Domain</span><span class="val">Enterprise / Education</span></div>
-          <div class="info-row"><span class="key">Experience</span><span class="val">6+ years enterprise IT</span></div>
-        </div>
-        <div class="info-block">
-          <div class="info-block-title">Location</div>
-          <div class="info-row"><span class="key">Based in</span><span class="val">South Texas</span></div>
-          <div class="info-row"><span class="key">Open to</span><span class="val">Remote or relocation</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-num" aria-hidden="true">02</span>
-      <h2 class="section-heading">What I work with.</h2>
-    </div>
-    <div class="skills-table">
-      <div class="skill-row reveal">
-        <div class="skill-category">Networking</div>
-        <div class="skill-list">TCP/IP, Subnetting, VLANs, LAN/WAN, DHCP, DNS, Router Config, Switch Config, Wireshark, Network Troubleshooting</div>
-      </div>
-      <div class="skill-row reveal reveal-d1">
-        <div class="skill-category">Security</div>
-        <div class="skill-list">Access Control, Threat Detection, Vulnerability Assessment, SIEM / Splunk, Data Privacy, FERPA Compliance, TEA Regulations, Kali Linux, Nmap</div>
-      </div>
-      <div class="skill-row reveal reveal-d2">
-        <div class="skill-category">Systems &amp; OS</div>
-        <div class="skill-list">Windows Server, Windows Desktop, macOS, Linux (Kali), Active Directory, Group Policy, Virtualization</div>
-      </div>
-      <div class="skill-row reveal reveal-d3">
-        <div class="skill-category">Hardware &amp; Tools</div>
-        <div class="skill-list">PC Assembly &amp; Repair, Workstation Deployment, Peripheral Config, Mobile Devices, Microsoft 365, Ticketing Systems, Asset Management, VOIP Systems</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="section section-alt">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-num" aria-hidden="true">03</span>
-      <h2 class="section-heading">Hands-on projects.</h2>
-    </div>
-    <div class="projects-list">
-
-      <div class="project-item reveal" role="button" tabindex="0" aria-expanded="false" onclick="toggleProject(this)" onkeydown="handleProjectKey(event,this)">
-        <div class="project-row">
-          <span class="project-num" aria-hidden="true">01</span>
-          <div>
-            <h3 class="project-name">Vulnerability Assessment Lab</h3>
-            <div class="project-summary">Sandboxed attack environment with formal assessment report</div>
-          </div>
-          <span class="project-tag tag-security">Security</span>
-          <span class="project-toggle" aria-hidden="true">+</span>
-        </div>
-        <div class="project-expand">
-          <div class="project-expand-inner">
-            <div class="project-detail">
-              <p class="project-detail-text">Stood up Metasploitable 2 and DVWA in an isolated virtual network to simulate a target-rich environment. Performed host discovery and service enumeration with Nmap, then used Kali Linux tooling to identify and demonstrate exploitable vulnerabilities. Delivered a formal written report with severity ratings (CVSS-informed) and remediation recommendations — mirroring a real-world penetration test engagement.</p>
-              <div class="project-tools">
-                <span class="tool-chip">Kali Linux</span>
-                <span class="tool-chip">Nmap</span>
-                <span class="tool-chip">Metasploitable 2</span>
-                <span class="tool-chip">DVWA</span>
-                <span class="tool-chip">VirtualBox</span>
+            <div class="about-side reveal reveal-d1">
+              <div class="info-block">
+                <div class="info-block-title">Education</div>
+                <div class="edu-degree">
+                  B.A.T. — Computer Information Technology
+                </div>
+                <div class="edu-school">South Texas College</div>
+                <div class="edu-badge">Expected May 2026</div>
+              </div>
+              <div class="info-block">
+                <div class="info-block-title">Focus Areas</div>
+                <div class="info-row">
+                  <span class="key">Primary</span
+                  ><span class="val">Cybersecurity Analysis</span>
+                </div>
+                <div class="info-row">
+                  <span class="key">Secondary</span
+                  ><span class="val">Network Administration</span>
+                </div>
+                <div class="info-row">
+                  <span class="key">Domain</span
+                  ><span class="val">Enterprise / Education</span>
+                </div>
+                <div class="info-row">
+                  <span class="key">Experience</span
+                  ><span class="val">6+ years enterprise IT</span>
+                </div>
+              </div>
+              <div class="info-block">
+                <div class="info-block-title">Location</div>
+                <div class="info-row">
+                  <span class="key">Based in</span
+                  ><span class="val">South Texas</span>
+                </div>
+                <div class="info-row">
+                  <span class="key">Open to</span
+                  ><span class="val">Remote or relocation</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="project-item reveal reveal-d1" role="button" tabindex="0" aria-expanded="false" onclick="toggleProject(this)" onkeydown="handleProjectKey(event,this)">
-        <div class="project-row">
-          <span class="project-num" aria-hidden="true">02</span>
-          <div>
-            <h3 class="project-name">SIEM Log Analysis Lab</h3>
-            <div class="project-summary">End-to-end Splunk pipeline with detection alerts for real threat patterns</div>
+      <!-- SKILLS -->
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-num" aria-hidden="true">02</span>
+            <h2 class="section-heading">What I work with.</h2>
           </div>
-          <span class="project-tag tag-siem">SIEM</span>
-          <span class="project-toggle" aria-hidden="true">+</span>
-        </div>
-        <div class="project-expand">
-          <div class="project-expand-inner">
-            <div class="project-detail">
-              <p class="project-detail-text">Installed and configured Splunk Free to ingest logs from a firewall, router, and Windows Event sources. Built custom dashboards and detection rules targeting failed authentication bursts, port scanning signatures, and anomalous outbound traffic volumes. This pipeline closely mirrors the monitoring architecture used in real SOC environments.</p>
-              <div class="project-tools">
-                <span class="tool-chip">Splunk Free</span>
-                <span class="tool-chip">Windows Event Logs</span>
-                <span class="tool-chip">Firewall Logs</span>
-                <span class="tool-chip">SPL</span>
+          <div class="skills-table">
+            <div class="skill-row reveal">
+              <div class="skill-category">Networking</div>
+              <div class="skill-list">
+                TCP/IP, Subnetting, VLANs, LAN/WAN, DHCP, DNS, Router Config,
+                Switch Config, Wireshark, Network Troubleshooting
+              </div>
+            </div>
+            <div class="skill-row reveal reveal-d1">
+              <div class="skill-category">Security</div>
+              <div class="skill-list">
+                Access Control, Threat Detection, Vulnerability Assessment, SIEM
+                / Splunk, Data Privacy, FERPA Compliance, TEA Regulations, Kali
+                Linux, Nmap
+              </div>
+            </div>
+            <div class="skill-row reveal reveal-d2">
+              <div class="skill-category">Systems &amp; OS</div>
+              <div class="skill-list">
+                Windows Server, Windows Desktop, macOS, Linux (Kali), Active
+                Directory, Group Policy, Virtualization
+              </div>
+            </div>
+            <div class="skill-row reveal reveal-d3">
+              <div class="skill-category">Hardware &amp; Tools</div>
+              <div class="skill-list">
+                PC Assembly &amp; Repair, Workstation Deployment, Peripheral
+                Config, Mobile Devices, Microsoft 365, Ticketing Systems, Asset
+                Management, VOIP Systems
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="project-item reveal reveal-d2" role="button" tabindex="0" aria-expanded="false" onclick="toggleProject(this)" onkeydown="handleProjectKey(event,this)">
-        <div class="project-row">
-          <span class="project-num" aria-hidden="true">03</span>
-          <div>
-            <h3 class="project-name">Network Traffic Analysis</h3>
-            <div class="project-summary">Packet capture methodology for detecting ARP spoofing and DNS exfiltration</div>
+      <!-- PROJECTS -->
+      <section id="projects" class="section section-alt">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-num" aria-hidden="true">03</span>
+            <h2 class="section-heading">Hands-on projects.</h2>
           </div>
-          <span class="project-tag tag-network">Network</span>
-          <span class="project-toggle" aria-hidden="true">+</span>
-        </div>
-        <div class="project-expand">
-          <div class="project-expand-inner">
-            <div class="project-detail">
-              <p class="project-detail-text">Captured live traffic across a multi-segment home network to establish baseline behavioral profiles. Developed a documented methodology for identifying anomalous patterns — including ARP spoofing indicators, DNS tunneling signatures, and unexpected inter-VLAN flows. The approach translates directly to blue team triage workflows.</p>
-              <div class="project-tools">
-                <span class="tool-chip">Wireshark</span>
-                <span class="tool-chip">Multi-segment Network</span>
-                <span class="tool-chip">Packet Analysis</span>
+          <div class="projects-list">
+            <div
+              class="project-item reveal"
+              role="button"
+              tabindex="0"
+              aria-expanded="false"
+              onclick="toggleProject(this)"
+              onkeydown="handleProjectKey(event, this)"
+            >
+              <div class="project-row">
+                <span class="project-num" aria-hidden="true">01</span>
+                <div>
+                  <h3 class="project-name">Vulnerability Assessment Lab</h3>
+                  <div class="project-summary">
+                    Sandboxed attack environment with formal assessment report
+                  </div>
+                </div>
+                <span class="project-tag tag-security">Security</span>
+                <span class="project-toggle" aria-hidden="true">+</span>
+              </div>
+              <div class="project-expand">
+                <div class="project-expand-inner">
+                  <div class="project-detail">
+                    <p class="project-detail-text">
+                      Stood up Metasploitable 2 and DVWA in an isolated virtual
+                      network to simulate a target-rich environment. Performed
+                      host discovery and service enumeration with Nmap, then
+                      used Kali Linux tooling to identify and demonstrate
+                      exploitable vulnerabilities. Delivered a formal written
+                      report with severity ratings (CVSS-informed) and
+                      remediation recommendations — mirroring a real-world
+                      penetration test engagement.
+                    </p>
+                    <div class="project-tools">
+                      <span class="tool-chip">Kali Linux</span>
+                      <span class="tool-chip">Nmap</span>
+                      <span class="tool-chip">Metasploitable 2</span>
+                      <span class="tool-chip">DVWA</span>
+                      <span class="tool-chip">VirtualBox</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="project-item reveal reveal-d1"
+              role="button"
+              tabindex="0"
+              aria-expanded="false"
+              onclick="toggleProject(this)"
+              onkeydown="handleProjectKey(event, this)"
+            >
+              <div class="project-row">
+                <span class="project-num" aria-hidden="true">02</span>
+                <div>
+                  <h3 class="project-name">SIEM Log Analysis Lab</h3>
+                  <div class="project-summary">
+                    End-to-end Splunk pipeline with detection alerts for real
+                    threat patterns
+                  </div>
+                </div>
+                <span class="project-tag tag-siem">SIEM</span>
+                <span class="project-toggle" aria-hidden="true">+</span>
+              </div>
+              <div class="project-expand">
+                <div class="project-expand-inner">
+                  <div class="project-detail">
+                    <p class="project-detail-text">
+                      Installed and configured Splunk Free to ingest logs from a
+                      firewall, router, and Windows Event sources. Built custom
+                      dashboards and detection rules targeting failed
+                      authentication bursts, port scanning signatures, and
+                      anomalous outbound traffic volumes. This pipeline closely
+                      mirrors the monitoring architecture used in real SOC
+                      environments.
+                    </p>
+                    <div class="project-tools">
+                      <span class="tool-chip">Splunk Free</span>
+                      <span class="tool-chip">Windows Event Logs</span>
+                      <span class="tool-chip">Firewall Logs</span>
+                      <span class="tool-chip">SPL</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="project-item reveal reveal-d2"
+              role="button"
+              tabindex="0"
+              aria-expanded="false"
+              onclick="toggleProject(this)"
+              onkeydown="handleProjectKey(event, this)"
+            >
+              <div class="project-row">
+                <span class="project-num" aria-hidden="true">03</span>
+                <div>
+                  <h3 class="project-name">Network Traffic Analysis</h3>
+                  <div class="project-summary">
+                    Packet capture methodology for detecting ARP spoofing and
+                    DNS exfiltration
+                  </div>
+                </div>
+                <span class="project-tag tag-network">Network</span>
+                <span class="project-toggle" aria-hidden="true">+</span>
+              </div>
+              <div class="project-expand">
+                <div class="project-expand-inner">
+                  <div class="project-detail">
+                    <p class="project-detail-text">
+                      Captured live traffic across a multi-segment home network
+                      to establish baseline behavioral profiles. Developed a
+                      documented methodology for identifying anomalous patterns
+                      — including ARP spoofing indicators, DNS tunneling
+                      signatures, and unexpected inter-VLAN flows. The approach
+                      translates directly to blue team triage workflows.
+                    </p>
+                    <div class="project-tools">
+                      <span class="tool-chip">Wireshark</span>
+                      <span class="tool-chip">Multi-segment Network</span>
+                      <span class="tool-chip">Packet Analysis</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="project-item reveal reveal-d1"
+              role="button"
+              tabindex="0"
+              aria-expanded="false"
+              onclick="toggleProject(this)"
+              onkeydown="handleProjectKey(event, this)"
+            >
+              <div class="project-row">
+                <span class="project-num" aria-hidden="true">04</span>
+                <div>
+                  <h3 class="project-name">Segmented Home Network Lab</h3>
+                  <div class="project-summary">
+                    Multi-VLAN architecture with least-privilege firewall policy
+                    and VPN remote access
+                  </div>
+                </div>
+                <span class="project-tag tag-network">Network</span>
+                <span class="project-toggle" aria-hidden="true">+</span>
+              </div>
+              <div class="project-expand">
+                <div class="project-expand-inner">
+                  <div class="project-detail">
+                    <p class="project-detail-text">
+                      Designed and deployed a production-grade home network
+                      using VLANs to segment IoT, media, and trusted device
+                      traffic. Configured DHCP scoping per subnet, inter-VLAN
+                      routing policies, and stateful firewall rules enforcing
+                      least-privilege communication between zones. Implemented a
+                      VPN tunnel to simulate secure enterprise remote access —
+                      verifying full tunnel integrity end-to-end.
+                    </p>
+                    <div class="project-tools">
+                      <span class="tool-chip">VLAN Segmentation</span>
+                      <span class="tool-chip">Firewall Rules</span>
+                      <span class="tool-chip">VPN</span>
+                      <span class="tool-chip">DHCP Scoping</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="project-item reveal reveal-d2"
+              role="button"
+              tabindex="0"
+              aria-expanded="false"
+              onclick="toggleProject(this)"
+              onkeydown="handleProjectKey(event, this)"
+            >
+              <div class="project-row">
+                <span class="project-num" aria-hidden="true">05</span>
+                <div>
+                  <h3 class="project-name">A/V Production LAN</h3>
+                  <div class="project-summary">
+                    Dedicated LAN for pro audio/video with QoS-tuned live
+                    streaming performance
+                  </div>
+                </div>
+                <span class="project-tag tag-av">A/V</span>
+                <span class="project-toggle" aria-hidden="true">+</span>
+              </div>
+              <div class="project-expand">
+                <div class="project-expand-inner">
+                  <div class="project-detail">
+                    <p class="project-detail-text">
+                      Configured a purpose-built LAN for professional audio and
+                      video production workflows. Applied QoS policies to
+                      prioritize real-time and low-latency traffic for live
+                      streaming pipelines and remote digital mixer control over
+                      TCP/IP. Validated end-to-end latency targets and stream
+                      stability under sustained production load.
+                    </p>
+                    <div class="project-tools">
+                      <span class="tool-chip">QoS Policy</span>
+                      <span class="tool-chip">Dedicated LAN</span>
+                      <span class="tool-chip">Live Streaming</span>
+                      <span class="tool-chip">TCP/IP</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="project-item reveal reveal-d1" role="button" tabindex="0" aria-expanded="false" onclick="toggleProject(this)" onkeydown="handleProjectKey(event,this)">
-        <div class="project-row">
-          <span class="project-num" aria-hidden="true">04</span>
-          <div>
-            <h3 class="project-name">Segmented Home Network Lab</h3>
-            <div class="project-summary">Multi-VLAN architecture with least-privilege firewall policy and VPN remote access</div>
+      <!-- EXPERIENCE -->
+      <section id="experience" class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-num" aria-hidden="true">04</span>
+            <h2 class="section-heading">Work history.</h2>
           </div>
-          <span class="project-tag tag-network">Network</span>
-          <span class="project-toggle" aria-hidden="true">+</span>
-        </div>
-        <div class="project-expand">
-          <div class="project-expand-inner">
-            <div class="project-detail">
-              <p class="project-detail-text">Designed and deployed a production-grade home network using VLANs to segment IoT, media, and trusted device traffic. Configured DHCP scoping per subnet, inter-VLAN routing policies, and stateful firewall rules enforcing least-privilege communication between zones. Implemented a VPN tunnel to simulate secure enterprise remote access — verifying full tunnel integrity end-to-end.</p>
-              <div class="project-tools">
-                <span class="tool-chip">VLAN Segmentation</span>
-                <span class="tool-chip">Firewall Rules</span>
-                <span class="tool-chip">VPN</span>
-                <span class="tool-chip">DHCP Scoping</span>
+          <div>
+            <div class="timeline-entry reveal">
+              <div>
+                <div class="timeline-period">Sep 2019 —<br />Present</div>
+                <div class="timeline-org">
+                  Mission Consolidated<br />Independent School District
+                </div>
+              </div>
+              <div>
+                <h3 class="timeline-role">
+                  Attendance &amp; Purchasing — IT Liaison
+                </h3>
+                <ul class="timeline-bullets">
+                  <li>
+                    Safeguard sensitive student records in strict compliance
+                    with TEA and FERPA data privacy requirements, applying
+                    regulatory frameworks hands-on at scale.
+                  </li>
+                  <li>
+                    Manage the full procurement lifecycle for department
+                    technology assets — purchase orders, requisitions, and
+                    hardware/software inventory records.
+                  </li>
+                  <li>
+                    Primary on-site technical resource for 10+ front office
+                    staff: workstation deployment, hardware troubleshooting, and
+                    peripheral configuration.
+                  </li>
+                  <li>
+                    Diagnose and resolve Tier 1 network connectivity and
+                    software issues under operational pressure during enrollment
+                    and high-stakes testing periods.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-entry reveal reveal-d1">
+              <div>
+                <div class="timeline-period">Mar 2018 —<br />Sep 2019</div>
+                <div class="timeline-org">Charter Communications</div>
+              </div>
+              <div>
+                <h3 class="timeline-role">
+                  Bilingual Billing &amp; Tech Support
+                </h3>
+                <ul class="timeline-bullets">
+                  <li>
+                    Provided remote technical support for residential internet
+                    and VOIP services — diagnosing physical layer issues,
+                    modem/router configuration failures, and network
+                    connectivity problems.
+                  </li>
+                  <li>
+                    Applied root-cause analysis to triage complex service
+                    interruptions, correctly differentiating billing-related
+                    from technical issues.
+                  </li>
+                  <li>
+                    Delivered clear technical solutions to non-technical
+                    customers in English and Spanish, improving first-call
+                    resolution and satisfaction metrics.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="project-item reveal reveal-d2" role="button" tabindex="0" aria-expanded="false" onclick="toggleProject(this)" onkeydown="handleProjectKey(event,this)">
-        <div class="project-row">
-          <span class="project-num" aria-hidden="true">05</span>
-          <div>
-            <h3 class="project-name">A/V Production LAN</h3>
-            <div class="project-summary">Dedicated LAN for pro audio/video with QoS-tuned live streaming performance</div>
-          </div>
-          <span class="project-tag tag-av">A/V</span>
-          <span class="project-toggle" aria-hidden="true">+</span>
-        </div>
-        <div class="project-expand">
-          <div class="project-expand-inner">
-            <div class="project-detail">
-              <p class="project-detail-text">Configured a purpose-built LAN for professional audio and video production workflows. Applied QoS policies to prioritize real-time and low-latency traffic for live streaming pipelines and remote digital mixer control over TCP/IP. Validated end-to-end latency targets and stream stability under sustained production load.</p>
-              <div class="project-tools">
-                <span class="tool-chip">QoS Policy</span>
-                <span class="tool-chip">Dedicated LAN</span>
-                <span class="tool-chip">Live Streaming</span>
-                <span class="tool-chip">TCP/IP</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience" class="section">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-num" aria-hidden="true">04</span>
-      <h2 class="section-heading">Work history.</h2>
-    </div>
-    <div>
-      <div class="timeline-entry reveal">
-        <div>
-          <div class="timeline-period">Sep 2019 —<br>Present</div>
-          <div class="timeline-org">Mission Consolidated<br>Independent School District</div>
-        </div>
-        <div>
-          <h3 class="timeline-role">Attendance &amp; Purchasing — IT Liaison</h3>
-          <ul class="timeline-bullets">
-            <li>Safeguard sensitive student records in strict compliance with TEA and FERPA data privacy requirements, applying regulatory frameworks hands-on at scale.</li>
-            <li>Manage the full procurement lifecycle for department technology assets — purchase orders, requisitions, and hardware/software inventory records.</li>
-            <li>Primary on-site technical resource for 10+ front office staff: workstation deployment, hardware troubleshooting, and peripheral configuration.</li>
-            <li>Diagnose and resolve Tier 1 network connectivity and software issues under operational pressure during enrollment and high-stakes testing periods.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="timeline-entry reveal reveal-d1">
-        <div>
-          <div class="timeline-period">Mar 2018 —<br>Sep 2019</div>
-          <div class="timeline-org">Charter Communications</div>
-        </div>
-        <div>
-          <h3 class="timeline-role">Bilingual Billing &amp; Tech Support</h3>
-          <ul class="timeline-bullets">
-            <li>Provided remote technical support for residential internet and VOIP services — diagnosing physical layer issues, modem/router configuration failures, and network connectivity problems.</li>
-            <li>Applied root-cause analysis to triage complex service interruptions, correctly differentiating billing-related from technical issues.</li>
-            <li>Delivered clear technical solutions to non-technical customers in English and Spanish, improving first-call resolution and satisfaction metrics.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COMING SOON -->
-<section id="coming-soon" class="section section-alt">
-  <div class="container">
-    <div class="placeholder-block reveal">
-      <div class="placeholder-symbol">{ }</div>
-      <div class="placeholder-heading">Projects are being deployed</div>
-      <p class="placeholder-sub">Each project lives at its own subdomain. Check back soon — labs, tools, and write-ups are in progress.</p>
-      <div class="subdomain-list">
-        <div class="subdomain-pill"><span class="subdomain-dot"></span>security.hectorlugo.dev</div>
-        <div class="subdomain-pill"><span class="subdomain-dot"></span>lab.hectorlugo.dev</div>
-        <div class="subdomain-pill"><span class="subdomain-dot"></span>network.hectorlugo.dev</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section">
-  <div class="container">
-    <div class="contact-grid">
-      <div>
-        <div class="section-header reveal" style="margin-bottom: 1rem;">
-          <span class="section-num" aria-hidden="true">05</span>
-          <h2 class="contact-heading">Ready to contribute.<br><em>Let's connect.</em></h2>
-        </div>
-        <p class="contact-note reveal reveal-d1">I'm actively seeking a cybersecurity analyst or network administrator role. Open to full-time, contract, or internship opportunities — reach out and let's connect.</p>
-        <div class="contact-links reveal reveal-d2">
-          <a href="mailto:haze.lugo@gmail.com" class="contact-link">
-            <div class="contact-link-icon">
-              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="contact-grid">
             <div>
-              <div class="contact-link-label">Email</div>
-              <div class="contact-link-val">haze.lugo@gmail.com</div>
+              <div class="section-header reveal">
+                <span class="section-num" aria-hidden="true">05</span>
+                <h2 class="contact-heading">
+                  Ready to contribute.<br /><em>Let's connect.</em>
+                </h2>
+              </div>
+              <p class="contact-note reveal reveal-d1">
+                I'm actively seeking a cybersecurity analyst or network
+                administrator role. Open to full-time, contract, or internship
+                opportunities. Email is the best way to reach me.
+              </p>
+              <div class="contact-links reveal reveal-d2">
+                <a href="mailto:haze.lugo@gmail.com" class="contact-link">
+                  <div class="contact-link-icon">
+                    <svg
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                      />
+                      <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-link-label">Email</div>
+                    <div class="contact-link-val">haze.lugo@gmail.com</div>
+                  </div>
+                </a>
+                <a
+                  href="https://linkedin.com/in/hhlugo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-link"
+                >
+                  <div class="contact-link-icon">
+                    <svg
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                      />
+                      <rect x="2" y="9" width="4" height="12" />
+                      <circle cx="4" cy="4" r="2" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-link-label">LinkedIn</div>
+                    <div class="contact-link-val">linkedin.com/in/hhlugo</div>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/hazelugo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-link"
+                >
+                  <div class="contact-link-icon">
+                    <svg
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-link-label">GitHub</div>
+                    <div class="contact-link-val">github.com/hazelugo</div>
+                  </div>
+                </a>
+                <a href="tel:9564323287" class="contact-link">
+                  <div class="contact-link-icon">
+                    <svg
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.6 6.6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-link-label">Phone</div>
+                    <div
+                      class="contact-link-val"
+                      data-obfuscate="956-432-3287"
+                    ></div>
+                  </div>
+                </a>
+              </div>
             </div>
-          </a>
-          <a href="https://linkedin.com/in/hhlugo" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <div class="contact-link-icon">
-              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <div class="reveal reveal-d2">
+              <div class="contact-avail">
+                <div class="avail-label">Current Status</div>
+                <div class="avail-status">
+                  <span class="pulse-dot"></span>
+                  Open to opportunities
+                </div>
+                <p class="avail-note">
+                  Graduating <strong>May 2026</strong>. Available for full-time
+                  positions, internships, or contract work in
+                  <strong>cybersecurity</strong> or
+                  <strong>network administration</strong>. Located in South
+                  Texas; open to relocation or remote.
+                </p>
+              </div>
             </div>
-            <div>
-              <div class="contact-link-label">LinkedIn</div>
-              <div class="contact-link-val">linkedin.com/in/hhlugo</div>
-            </div>
-          </a>
-          <a href="tel:9564323287" class="contact-link">
-            <div class="contact-link-icon">
-              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.6 6.6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            </div>
-            <div>
-              <div class="contact-link-label">Phone</div>
-              <div class="contact-link-val">956-432-3287</div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="reveal reveal-d2">
-        <div class="contact-avail">
-          <div class="avail-label">Current Status</div>
-          <div class="avail-status">
-            <span class="pulse-dot"></span>
-            Open to opportunities
           </div>
-          <p class="avail-note">Graduating <strong>May 2026</strong>. Available for full-time positions, internships, or contract work in <strong>cybersecurity</strong> or <strong>network administration</strong>. Located in South Texas; open to relocation or remote.</p>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
+    </main>
 
-</main>
+    <footer>
+      <span>© 2026 Hector Lugo</span>
+      <span>Cybersecurity &amp; Network Professional · South Texas</span>
+      <a href="mailto:haze.lugo@gmail.com">haze.lugo@gmail.com</a>
+    </footer>
 
-<footer>
-  <span>© 2026 Hector Lugo</span>
-  <span>Cybersecurity &amp; Network Professional · South Texas</span>
-  <a href="mailto:haze.lugo@gmail.com">haze.lugo@gmail.com</a>
-</footer>
+    <script>
+      // ── MOBILE SIDEBAR ──────────────────────────────────────────
+      const menuBtn = document.getElementById("menuBtn");
+      const sidebar = document.getElementById("sidebar");
+      const navOverlay = document.getElementById("navOverlay");
 
-<script>
-// ── MOBILE SIDEBAR ──────────────────────────────────────────
-const menuBtn    = document.getElementById('menuBtn');
-const sidebar    = document.getElementById('sidebar');
-const navOverlay = document.getElementById('navOverlay');
+      function openNav() {
+        sidebar.classList.add("open");
+        navOverlay.classList.add("open");
+        menuBtn.setAttribute("aria-expanded", "true");
+      }
+      function closeNav() {
+        sidebar.classList.remove("open");
+        navOverlay.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+      }
+      menuBtn.addEventListener("click", () => {
+        sidebar.classList.contains("open") ? closeNav() : openNav();
+      });
+      navOverlay.addEventListener("click", closeNav);
+      sidebar.querySelectorAll(".sidebar-item, .sidebar-cta-btn").forEach((a) =>
+        a.addEventListener("click", () => {
+          if (window.innerWidth <= 768) closeNav();
+        }),
+      );
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && sidebar.classList.contains("open"))
+          closeNav();
+      });
 
-function openNav() {
-  sidebar.classList.add('open');
-  navOverlay.classList.add('open');
-  menuBtn.setAttribute('aria-expanded', 'true');
-}
-function closeNav() {
-  sidebar.classList.remove('open');
-  navOverlay.classList.remove('open');
-  menuBtn.setAttribute('aria-expanded', 'false');
-}
-menuBtn.addEventListener('click', () => {
-  sidebar.classList.contains('open') ? closeNav() : openNav();
-});
-navOverlay.addEventListener('click', closeNav);
-sidebar.querySelectorAll('.sidebar-item, .sidebar-cta-btn').forEach(a => a.addEventListener('click', () => {
-  if (window.innerWidth <= 768) closeNav();
-}));
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && sidebar.classList.contains('open')) closeNav();
-});
+      // ── SIDEBAR ACTIVE STATE ─────────────────────────────────────
+      const sections = document.querySelectorAll("section[id], div[id]");
+      const sidebarItems = document.querySelectorAll(
+        ".sidebar-item[data-section]",
+      );
+      const sectionObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              sidebarItems.forEach((item) => item.classList.remove("active"));
+              const active = document.querySelector(
+                `.sidebar-item[data-section="${e.target.id}"]`,
+              );
+              if (active) active.classList.add("active");
+            }
+          });
+        },
+        { threshold: 0.3 },
+      );
+      sections.forEach((s) => sectionObserver.observe(s));
 
-// ── SIDEBAR ACTIVE STATE ─────────────────────────────────────
-const sections = document.querySelectorAll('section[id], div[id]');
-const sidebarItems = document.querySelectorAll('.sidebar-item[data-section]');
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      sidebarItems.forEach(item => item.classList.remove('active'));
-      const active = document.querySelector(`.sidebar-item[data-section="${e.target.id}"]`);
-      if (active) active.classList.add('active');
-    }
-  });
-}, { threshold: 0.3 });
-sections.forEach(s => sectionObserver.observe(s));
+      // ── SCROLL REVEAL ────────────────────────────────────────────
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+              observer.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
 
-// ── SCROLL REVEAL ────────────────────────────────────────────
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-  });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// ── PROJECT EXPAND ───────────────────────────────────────────
-function toggleProject(item) {
-  const expand = item.querySelector('.project-expand');
-  const isOpen = item.classList.contains('open');
-  document.querySelectorAll('.project-item.open').forEach(c => {
-    c.classList.remove('open');
-    c.querySelector('.project-expand').classList.remove('open');
-    c.setAttribute('aria-expanded', 'false');
-  });
-  if (!isOpen) {
-    item.classList.add('open');
-    expand.classList.add('open');
-    item.setAttribute('aria-expanded', 'true');
-  }
-}
-function handleProjectKey(e, item) {
-  if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleProject(item); }
-}
-</script>
-</body>
+      // ── PROJECT EXPAND ───────────────────────────────────────────
+      function toggleProject(item) {
+        const expand = item.querySelector(".project-expand");
+        const isOpen = item.classList.contains("open");
+        document.querySelectorAll(".project-item.open").forEach((c) => {
+          c.classList.remove("open");
+          c.querySelector(".project-expand").classList.remove("open");
+          c.setAttribute("aria-expanded", "false");
+        });
+        if (!isOpen) {
+          item.classList.add("open");
+          expand.classList.add("open");
+          item.setAttribute("aria-expanded", "true");
+        }
+      }
+      function handleProjectKey(e, item) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggleProject(item);
+        }
+      }
+    </script>
+  </body>
 </html>

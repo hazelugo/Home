@@ -4,7 +4,6 @@
       "Bash(pip install:*)",
       "Bash(python -c \":*)",
       "Bash(find C:UsersHectorDocumentsEmpireHome -type f \\\\\\(-name *.html -o -name *.css -o -name *.js -o -name *.ts -o -name *.tsx -o -name *.jsx -o -name *.vue -o -name *.svelte -o -name package.json -o -name tsconfig.json -o -name vite.config.* -o -name webpack.config.* -o -name .next \\\\\\))",
-      "Bash(find C:UsersHectorMetronomeAppsrc -type f \\\\\\(-name *.html -o -name *.css -o -name *.js -o -name *.ts -o -name *.tsx -o -name *.jsx -o -name *.vue -o -name *.svelte -o -name package.json -o -name tsconfig.json \\\\\\))",
       "Bash(tsconfig \")",
       "Bash(inkscape --version)",
       "Bash(magick --version)",
@@ -13,7 +12,10 @@
       "Bash(npm uninstall:*)",
       "Bash(npx skills:*)",
       "WebSearch",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Skill(update-config)",
+      "Read(//c/Users/Hector/.claude/**)"
     ]
-  }
+  },
+  "outputStyle": "default"
 }

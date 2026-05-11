@@ -12,7 +12,7 @@ Evolve a live single-file portfolio from a cybersecurity/network resume page int
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Content Updates** - Update hero, about, and skills to reflect the dual-track identity
+- [x] **Phase 1: Content Updates** - Update hero, about, and skills to reflect the dual-track identity (completed 2026-05-11)
 - [ ] **Phase 2: New Sections & Projects** - Add Workflow section, three AI projects, and update navigation
 - [ ] **Phase 3: Resume Page & Quality Gate** - Build resume.html and verify mobile, accessibility, and no-JS constraints
 
@@ -30,9 +30,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Update hero subtitle, hero description, and document title/og meta for dual-track identity (HERO-01, HERO-02, HERO-03)
-- [ ] 01-02-PLAN.md — Insert AI paragraph in About and rewrite availability paragraph (ABUT-01)
-- [ ] 01-03-PLAN.md — Prepend AI Development & Integration row to skills table (SKIL-01, SKIL-02)
+- [x] 01-01-PLAN.md — Update hero subtitle, hero description, and document title/og meta for dual-track identity (HERO-01, HERO-02, HERO-03)
+- [x] 01-02-PLAN.md — Insert AI paragraph in About and rewrite availability paragraph (ABUT-01)
+- [x] 01-03-PLAN.md — Prepend AI Development & Integration row to skills table (SKIL-01, SKIL-02)
 
 **UI hint**: yes
 
@@ -69,6 +69,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Content Updates | 0/3 | Planned | - |
+| 1. Content Updates | 3/3 | Complete   | 2026-05-11 |
 | 2. New Sections & Projects | 0/? | Not started | - |
 | 3. Resume Page & Quality Gate | 0/? | Not started | - |

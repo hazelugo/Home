@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -161,7 +161,7 @@
       }
       .sidebar-email {
         padding: 0.5rem 0.75rem 0.35rem;
-        font-size: 0.67rem;
+        font-size: 0.75rem;
         font-family: var(--font-mono);
         color: var(--text-muted);
         letter-spacing: 0.04em;
@@ -375,6 +375,10 @@
         background: var(--accent-mid);
         transform: translateY(-1px);
       }
+      .btn-primary:active {
+        background: var(--accent);
+        transform: translateY(0);
+      }
       .btn-ghost {
         display: inline-flex;
         align-items: center;
@@ -398,6 +402,10 @@
       .btn-ghost:hover {
         color: var(--text);
         border-color: var(--text-muted);
+      }
+      .btn-ghost:active {
+        color: var(--text);
+        border-color: var(--text);
       }
 
       /* ─── CERTS STRIP ───────────────────────────────────── */
@@ -427,7 +435,7 @@
       .cert-name {
         font-family: var(--font-display);
         font-size: 1.05rem;
-        font-weight: 700;
+        font-weight: 800;
         color: var(--text);
         margin-bottom: 0.2rem;
       }
@@ -566,7 +574,7 @@
       }
       .info-block-title {
         font-family: var(--font-mono);
-        font-size: 0.67rem;
+        font-size: 0.75rem;
         font-weight: 600;
         letter-spacing: 0.14em;
         text-transform: uppercase;
@@ -602,7 +610,7 @@
       }
       .edu-badge {
         display: inline-block;
-        font-size: 0.67rem;
+        font-size: 0.75rem;
         font-weight: 700;
         letter-spacing: 0.08em;
         text-transform: uppercase;
@@ -680,7 +688,7 @@
       .project-name {
         font-family: var(--font-display);
         font-size: 1.05rem;
-        font-weight: 700;
+        font-weight: 800;
         color: var(--text);
         margin-bottom: 0.15rem;
         line-height: 1.2;
@@ -691,7 +699,7 @@
         line-height: 1.4;
       }
       .project-tag {
-        font-size: 0.67rem;
+        font-size: 0.75rem;
         font-weight: 700;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -767,7 +775,7 @@
         gap: 0.45rem;
       }
       .tool-chip {
-        font-size: 0.67rem;
+        font-size: 0.75rem;
         font-weight: 600;
         letter-spacing: 0.06em;
         text-transform: uppercase;
@@ -807,7 +815,7 @@
       .timeline-role {
         font-family: var(--font-display);
         font-size: 1.2rem;
-        font-weight: 700;
+        font-weight: 800;
         color: var(--text);
         margin-bottom: 1.1rem;
         letter-spacing: -0.01em;
@@ -869,19 +877,17 @@
         align-items: center;
         gap: 1.25rem;
         text-decoration: none;
-        padding: 1.1rem 0;
+        padding: 1.1rem 0.75rem;
+        margin: 0 -0.75rem;
         border-bottom: 1px solid var(--border);
         transition: background 0.15s;
-        position: relative;
       }
       .contact-link:first-child {
         border-top: 1px solid var(--border);
       }
-      .contact-link:hover {
+      .contact-link:hover,
+      .contact-link:active {
         background: var(--accent-tint);
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
-        margin: 0 -0.75rem;
       }
       .contact-link-icon {
         width: 34px;
@@ -916,7 +922,7 @@
         background: var(--bg-2);
       }
       .avail-label {
-        font-size: 0.67rem;
+        font-size: 0.75rem;
         font-weight: 700;
         letter-spacing: 0.16em;
         text-transform: uppercase;
@@ -929,7 +935,7 @@
         gap: 0.6rem;
         font-family: var(--font-display);
         font-size: 1.05rem;
-        font-weight: 700;
+        font-weight: 800;
         color: var(--green);
         margin-bottom: 0.75rem;
       }
@@ -1015,6 +1021,9 @@
         .sidebar.open {
           transform: translateX(0);
         }
+        .sidebar-cta-btn {
+          height: 44px;
+        }
         .nav-menu-btn {
           display: flex;
         }
@@ -1043,12 +1052,33 @@
         .project-row {
           grid-template-columns: 2rem 1fr auto;
         }
+        .project-tag {
+          display: none;
+        }
         .project-detail {
           padding-left: 2rem;
         }
         footer {
           flex-direction: column;
           text-align: center;
+        }
+        .certs-strip {
+          flex-wrap: wrap;
+          overflow-x: visible;
+        }
+        .cert-item {
+          flex: 1 1 50%;
+          min-width: 0;
+          border-right: none;
+          border-bottom: 1px solid var(--border);
+        }
+        .cert-item:nth-child(odd) {
+          border-right: 1px solid var(--border);
+        }
+        .cert-status-col {
+          flex: 1 1 100%;
+          border-left: none;
+          justify-content: center;
         }
       }
 
@@ -1096,9 +1126,29 @@
       .contact-link-val[data-obfuscate]::after {
         content: attr(data-obfuscate);
       }
+
+      /* ─── SKIP LINK ─────────────────────────────────────── */
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0.75rem;
+        z-index: 9999;
+        background: var(--accent);
+        color: var(--bg);
+        padding: 0.75rem 1.25rem;
+        font-family: var(--font-body);
+        font-size: 0.875rem;
+        font-weight: 600;
+        border-radius: var(--radius);
+        text-decoration: none;
+      }
+      .skip-link:focus {
+        left: 0.75rem;
+      }
     </style>
   </head>
   <body>
+    <a href="#hero" class="skip-link">Skip to content</a>
     <!-- SIDEBAR -->
     <aside class="sidebar" id="sidebar" aria-label="Main navigation">
       <div class="sidebar-header">
@@ -1787,7 +1837,7 @@
                     <div class="contact-link-val">github.com/hazelugo</div>
                   </div>
                 </a>
-                <a href="tel:9564323287" class="contact-link">
+                <a href="tel:9564323287" class="contact-link" aria-label="Phone: 956-432-3287">
                   <div class="contact-link-icon">
                     <svg
                       aria-hidden="true"
@@ -1851,11 +1901,14 @@
         sidebar.classList.add("open");
         navOverlay.classList.add("open");
         menuBtn.setAttribute("aria-expanded", "true");
+        const firstLink = sidebar.querySelector(".sidebar-item");
+        if (firstLink) firstLink.focus();
       }
       function closeNav() {
         sidebar.classList.remove("open");
         navOverlay.classList.remove("open");
         menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.focus();
       }
       menuBtn.addEventListener("click", () => {
         sidebar.classList.contains("open") ? closeNav() : openNav();
@@ -1872,7 +1925,7 @@
       });
 
       // ── SIDEBAR ACTIVE STATE ─────────────────────────────────────
-      const sections = document.querySelectorAll("section[id], div[id]");
+      const sections = document.querySelectorAll("section[id]");
       const sidebarItems = document.querySelectorAll(
         ".sidebar-item[data-section]",
       );
@@ -1880,11 +1933,17 @@
         (entries) => {
           entries.forEach((e) => {
             if (e.isIntersecting) {
-              sidebarItems.forEach((item) => item.classList.remove("active"));
+              sidebarItems.forEach((item) => {
+                item.classList.remove("active");
+                item.removeAttribute("aria-current");
+              });
               const active = document.querySelector(
                 `.sidebar-item[data-section="${e.target.id}"]`,
               );
-              if (active) active.classList.add("active");
+              if (active) {
+                active.classList.add("active");
+                active.setAttribute("aria-current", "location");
+              }
             }
           });
         },
@@ -1923,12 +1982,6 @@
           item.setAttribute("aria-expanded", "true");
         }
       }
-      function handleProjectKey(e, item) {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          toggleProject(item);
-        }
-      }
-    </script>
+</script>
   </body>
 </html>

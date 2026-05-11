@@ -46,7 +46,13 @@ Plans:
   3. All five existing security/network lab projects remain present and functional
   4. Sidebar nav lists About, Skills, Workflow, Projects, Experience, Contact in that order, with Workflow scroll-linked active state working
   5. Section numbers throughout the page are correct after the Workflow section insertion
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — CSS tokens for Full-Stack/Frontend tags, sidebar Workflow nav item, and section-num renumbering (NAVM-01, NAVM-02, WKFL-04)
+- [ ] 02-02-PLAN.md — Insert How I work. section between Skills and Projects using existing skill-row pattern (WKFL-01, WKFL-02, WKFL-03, WKFL-04)
+- [ ] 02-03-PLAN.md — Add three new AI project accordion entries with .project-links row and renumber existing labs (PROJ-01..05)
+
 **UI hint**: yes
 
 ### Phase 3: Resume Page & Quality Gate

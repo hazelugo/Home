@@ -23,7 +23,8 @@
       "Bash(node __TRACKED_VAR__/.claude/get-shit-done/bin/gsd-tools.cjs commit 'chore: add project config' --files .planning/config.json)",
       "Bash(node __TRACKED_VAR__/.claude/get-shit-done/bin/gsd-tools.cjs commit 'docs: define v1 requirements' --files .planning/REQUIREMENTS.md)",
       "Bash(node *)",
-      "Skill(gsd-code-review)"
+      "Skill(gsd-code-review)",
+      "Bash(git commit *)"
     ]
   },
   "outputStyle": "default"

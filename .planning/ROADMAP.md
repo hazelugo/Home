@@ -27,7 +27,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. OG meta description and title reflect AI + security/network dual-track identity
   3. About section contains a paragraph covering shipped AI apps, AI-assisted workflow, and production deployments
   4. Skills section has a visible "AI Development & Integration" category with the correct tool list, and existing four categories are unchanged
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Update hero subtitle, hero description, and document title/og meta for dual-track identity (HERO-01, HERO-02, HERO-03)
+- [ ] 01-02-PLAN.md — Insert AI paragraph in About and rewrite availability paragraph (ABUT-01)
+- [ ] 01-03-PLAN.md — Prepend AI Development & Integration row to skills table (SKIL-01, SKIL-02)
+
 **UI hint**: yes
 
 ### Phase 2: New Sections & Projects
@@ -63,6 +69,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Content Updates | 0/? | Not started | - |
+| 1. Content Updates | 0/3 | Planned | - |
 | 2. New Sections & Projects | 0/? | Not started | - |
 | 3. Resume Page & Quality Gate | 0/? | Not started | - |

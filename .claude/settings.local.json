@@ -14,7 +14,9 @@
       "WebSearch",
       "WebFetch(domain:raw.githubusercontent.com)",
       "Skill(update-config)",
-      "Read(//c/Users/Hector/.claude/**)"
+      "Read(//c/Users/Hector/.claude/**)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ]
   },
   "outputStyle": "default"

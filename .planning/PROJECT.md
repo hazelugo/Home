@@ -18,13 +18,14 @@ A recruiter or hiring manager in any of three tracks — AI development, cyberse
 - ✓ Work history timeline (Mission CISD, Charter Communications) — existing
 - ✓ Contact section with email, LinkedIn, GitHub, phone — existing
 - ✓ Accessibility: skip link, aria-current, focus management, reduced motion support — Phase 0 (audit fixes)
+- ✓ Hero subtitle: "AI, Security & Network Professional" — Phase 1
+- ✓ Degree: "B.A.T. — Computer Information Technology" (no date qualifier) — Phase 1
+- ✓ About section: AI development track paragraph added — Phase 1
+- ✓ Skills: "AI Development & Integration" leads the skills table — Phase 1
+- ✓ OG meta updated to dual-track identity — Phase 1
 
 ### Active
 
-- [ ] Hero subtitle updated to "AI, Security & Network Professional"
-- [ ] Degree updated to "B.A.T. — Computer Information Technology" (no "Graduating" / no date)
-- [ ] About section extended with AI development track paragraph
-- [ ] Skills section: new "AI Development & Integration" category added
 - [ ] Three new projects added to accordion (Song Tool, Workout App, Emma's Math Quest) above existing security labs
 - [ ] "How I Work" section (Phase 1 → GSD, Phase 2 → Claude Code + MCPs, Phase 3 → Impeccable) between Skills and Projects in nav and page flow
 - [ ] Section numbering updated throughout to account for new "Workflow" section

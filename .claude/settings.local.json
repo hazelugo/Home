@@ -24,7 +24,10 @@
       "Bash(node __TRACKED_VAR__/.claude/get-shit-done/bin/gsd-tools.cjs commit 'docs: define v1 requirements' --files .planning/REQUIREMENTS.md)",
       "Bash(node *)",
       "Skill(gsd-code-review)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(grep -n \"hardcode\\\\|#[0-9a-fA-F]\\\\{3,6\\\\}\" \"C:\\\\Users\\\\Hector\\\\Documents\\\\Empire\\\\Home\\\\index.html\")",
+      "Bash(git rm *)",
+      "Bash(git *)"
     ]
   },
   "outputStyle": "default"

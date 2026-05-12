@@ -13,7 +13,7 @@ Evolve a live single-file portfolio from a cybersecurity/network resume page int
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Content Updates** - Update hero, about, and skills to reflect the dual-track identity (completed 2026-05-11)
-- [ ] **Phase 2: New Sections & Projects** - Add Workflow section, three AI projects, and update navigation
+- [x] **Phase 2: New Sections & Projects** - Add Workflow section, three AI projects, and update navigation (completed 2026-05-12)
 - [ ] **Phase 3: Resume Page & Quality Gate** - Build resume.html and verify mobile, accessibility, and no-JS constraints
 
 ## Phase Details
@@ -49,9 +49,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — CSS tokens for Full-Stack/Frontend tags, sidebar Workflow nav item, and section-num renumbering (NAVM-01, NAVM-02, WKFL-04)
-- [ ] 02-02-PLAN.md — Insert How I work. section between Skills and Projects using existing skill-row pattern (WKFL-01, WKFL-02, WKFL-03, WKFL-04)
-- [ ] 02-03-PLAN.md — Add three new AI project accordion entries with .project-links row and renumber existing labs (PROJ-01..05)
+- [x] 02-01-PLAN.md — CSS tokens for Full-Stack/Frontend tags, sidebar Workflow nav item, and section-num renumbering (NAVM-01, NAVM-02, WKFL-04)
+- [x] 02-02-PLAN.md — Insert How I work. section between Skills and Projects using existing skill-row pattern (WKFL-01, WKFL-02, WKFL-03, WKFL-04)
+- [x] 02-03-PLAN.md — Add three new AI project accordion entries with .project-links row and renumber existing labs (PROJ-01..05)
 
 **UI hint**: yes
 
@@ -76,5 +76,5 @@ Phases execute in numeric order: 1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Content Updates | 3/3 | Complete    | 2026-05-11 |
-| 2. New Sections & Projects | 0/? | Not started | - |
+| 2. New Sections & Projects | 3/3 | Complete   | 2026-05-12 |
 | 3. Resume Page & Quality Gate | 0/? | Not started | - |

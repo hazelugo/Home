@@ -1555,6 +1555,121 @@
               <div class="project-row">
                 <span class="project-num" aria-hidden="true">01</span>
                 <div>
+                  <h3 class="project-name">Song Tool</h3>
+                  <div class="project-summary">
+                    Music catalog and playlist builder with full-text search, drag-reorder, and defense-in-depth auth
+                  </div>
+                </div>
+                <span class="project-tag tag-fullstack">Full-Stack</span>
+                <span class="project-toggle" aria-hidden="true">+</span>
+              </div>
+              <div class="project-expand">
+                <div class="project-expand-inner">
+                  <div class="project-detail">
+                    <p class="project-detail-text">
+                      Song Tool is a music catalog and playlist builder I built end-to-end — from database schema to deployed UI. I used Postgres tsvector full-text search for instant catalog filtering, and fractional position indexing to make drag-and-drop reordering work without cascading row updates. Auth is layered: JWT sessions at the middleware boundary, route guards at the page level, and row-level security in Supabase so the database enforces ownership even if application logic is bypassed. Playwright E2E tests cover the critical flows.
+                    </p>
+                    <div class="project-links">
+                      <a href="https://haze-song-tool.vercel.app" target="_blank" rel="noopener noreferrer">View live →</a>
+                      <a href="https://github.com/hazelugo/Song-Tool" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                    </div>
+                    <div class="project-tools">
+                      <span class="tool-chip">Next.js 16</span>
+                      <span class="tool-chip">TypeScript</span>
+                      <span class="tool-chip">Supabase</span>
+                      <span class="tool-chip">Drizzle ORM</span>
+                      <span class="tool-chip">Vercel</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </button>
+
+            <button
+              type="button"
+              class="project-item reveal reveal-d1"
+              aria-expanded="false"
+              onclick="toggleProject(this)"
+            >
+              <div class="project-row">
+                <span class="project-num" aria-hidden="true">02</span>
+                <div>
+                  <h3 class="project-name">Workout App</h3>
+                  <div class="project-summary">
+                    Multi-user workout tracker with Google OAuth, per-user row-level security, and Vercel SPA routing
+                  </div>
+                </div>
+                <span class="project-tag tag-fullstack">Full-Stack</span>
+                <span class="project-toggle" aria-hidden="true">+</span>
+              </div>
+              <div class="project-expand">
+                <div class="project-expand-inner">
+                  <div class="project-detail">
+                    <p class="project-detail-text">
+                      Workout App started as a single-user local viewer and evolved into a multi-user account-based tracker. I added Google OAuth for sign-in and configured per-user row-level security in Supabase so each account's data is isolated at the database level — not just in application code. Vercel SPA routing required explicit configuration so OAuth redirect URLs resolve correctly after the auth handshake completes.
+                    </p>
+                    <div class="project-links">
+                      <a href="https://workout.hazelugo.com" target="_blank" rel="noopener noreferrer">View live →</a>
+                      <a href="https://github.com/hazelugo/Workout-App" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                    </div>
+                    <div class="project-tools">
+                      <span class="tool-chip">JavaScript</span>
+                      <span class="tool-chip">Supabase</span>
+                      <span class="tool-chip">Vercel</span>
+                      <span class="tool-chip">Google OAuth</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </button>
+
+            <button
+              type="button"
+              class="project-item reveal reveal-d2"
+              aria-expanded="false"
+              onclick="toggleProject(this)"
+            >
+              <div class="project-row">
+                <span class="project-num" aria-hidden="true">03</span>
+                <div>
+                  <h3 class="project-name">Emma's Math Quest</h3>
+                  <div class="project-summary">
+                    Adaptive math practice game with synthesized audio, CSS confetti, and 60px touch targets — built for a real 6-year-old user
+                  </div>
+                </div>
+                <span class="project-tag tag-frontend">Frontend</span>
+                <span class="project-toggle" aria-hidden="true">+</span>
+              </div>
+              <div class="project-expand">
+                <div class="project-expand-inner">
+                  <div class="project-detail">
+                    <p class="project-detail-text">
+                      Emma's Math Quest is an adaptive math practice game I built for my 6-year-old daughter. Difficulty adjusts using a rolling 10-answer window targeting an 80% correct rate — hard enough to stretch her without losing her. Audio feedback is synthesized via the Web Audio API with no external sound files, CSS confetti fires on correct-answer streaks, and every interactive target is at least 60px to accommodate small hands. Built for a real user with real constraints — not a demo.
+                    </p>
+                    <div class="project-links">
+                      <a href="https://emath.hazelugo.com" target="_blank" rel="noopener noreferrer">View live →</a>
+                      <a href="https://github.com/hazelugo/EmmaApp" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                    </div>
+                    <div class="project-tools">
+                      <span class="tool-chip">Vue 3</span>
+                      <span class="tool-chip">Vite</span>
+                      <span class="tool-chip">Tailwind CSS v4</span>
+                      <span class="tool-chip">Web Audio API</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </button>
+
+            <button
+              type="button"
+              class="project-item reveal"
+              aria-expanded="false"
+              onclick="toggleProject(this)"
+            >
+              <div class="project-row">
+                <span class="project-num" aria-hidden="true">01</span>
+                <div>
                   <h3 class="project-name">Vulnerability Assessment Lab</h3>
                   <div class="project-summary">
                     Sandboxed attack environment with formal assessment report

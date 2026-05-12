@@ -65,7 +65,13 @@ Plans:
   3. All new and modified sections display correctly at 390px viewport width
   4. A follow-up Impeccable audit returns no Critical or High findings
   5. Core content is readable with JavaScript disabled and the nav degrades gracefully
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Apply carry-over fixes to index.html: hero CTA text, og:url meta, footer resume link, contact-link resume row (RESU-05, RESU-06)
+- [ ] 03-02-PLAN.md — Create standalone resume.html with work history, education, certifications, skills, print CSS, back link, and Download PDF link (RESU-01, RESU-02, RESU-03, RESU-04)
+- [ ] 03-03-PLAN.md — Quality gate verification: mobile 390px check, no-JS readability check, Impeccable-style audit (QUAL-01, QUAL-02, QUAL-03)
+
 **UI hint**: yes
 
 ## Progress
@@ -77,4 +83,4 @@ Phases execute in numeric order: 1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Content Updates | 3/3 | Complete    | 2026-05-11 |
 | 2. New Sections & Projects | 3/3 | Complete    | 2026-05-12 |
-| 3. Resume Page & Quality Gate | 0/? | Not started | - |
+| 3. Resume Page & Quality Gate | 0/3 | Not started | - |

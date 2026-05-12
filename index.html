@@ -1520,19 +1520,34 @@
             <div class="skill-row reveal">
               <div class="skill-category">Spec &amp; Planning</div>
               <div class="skill-list">
-                I run a structured discovery process before writing a line of code. GSD — a meta-prompting, spec-driven development system — generates a PROJECT.md, REQUIREMENTS.md, ROADMAP.md, and per-phase CONTEXT.md that serve as persistent memory across sessions. Parallel research agents surface decisions early; atomic git commits keep every step reversible.
+                I run a structured discovery process before writing a line of
+                code. GSD — a meta-prompting, spec-driven development system —
+                generates a PROJECT.md, REQUIREMENTS.md, ROADMAP.md, and
+                per-phase CONTEXT.md that serve as persistent memory across
+                sessions. Parallel research agents surface decisions early;
+                atomic git commits keep every step reversible.
               </div>
             </div>
             <div class="skill-row reveal reveal-d1">
               <div class="skill-category">Build</div>
               <div class="skill-list">
-                Claude Code drives implementation from VS Code's integrated terminal, working through the plan artifacts produced in Spec &amp; Planning. MCP orchestration connects Supabase MCP, Gemini MCP, and Claude-native tools so the agent has live schema access and cross-model research without leaving the terminal. Context never drifts between sessions because the STATE.md and ROADMAP.md carry the full execution position.
+                Claude Code drives implementation from VS Code's integrated
+                terminal, working through the plan artifacts produced in Spec
+                &amp; Planning. MCP orchestration connects Supabase MCP, Gemini
+                MCP, and Claude-native tools so the agent has live schema access
+                and cross-model research without leaving the terminal. Context
+                never drifts between sessions because the STATE.md and
+                ROADMAP.md carry the full execution position.
               </div>
             </div>
             <div class="skill-row reveal reveal-d2">
               <div class="skill-category">Quality Gate</div>
               <div class="skill-list">
-                Before anything ships, I run an Impeccable audit — a 23-command design intelligence system that checks five quality dimensions and produces findings with severity ratings. Individual commands resolve each finding. Nothing reaches production until the gate clears.
+                Before anything ships, I run an Impeccable audit — a 23-command
+                design intelligence system that checks five quality dimensions
+                and produces findings with severity ratings. Individual commands
+                resolve each finding. Nothing reaches production until the gate
+                clears.
               </div>
             </div>
           </div>
@@ -1558,7 +1573,8 @@
                 <div>
                   <h3 class="project-name">Song Tool</h3>
                   <div class="project-summary">
-                    Music catalog and playlist builder with full-text search, drag-reorder, and defense-in-depth auth
+                    Music catalog and playlist builder with full-text search,
+                    drag-reorder, and defense-in-depth auth
                   </div>
                 </div>
                 <span class="project-tag tag-fullstack">Full-Stack</span>
@@ -1568,11 +1584,30 @@
                 <div class="project-expand-inner">
                   <div class="project-detail">
                     <p class="project-detail-text">
-                      Song Tool is a music catalog and playlist builder I built end-to-end — from database schema to deployed UI. I used Postgres tsvector full-text search for instant catalog filtering, and fractional position indexing to make drag-and-drop reordering work without cascading row updates. Auth is layered: JWT sessions at the middleware boundary, route guards at the page level, and row-level security in Supabase so the database enforces ownership even if application logic is bypassed. Playwright E2E tests cover the critical flows.
+                      Song Tool is a music catalog and playlist builder I built
+                      end-to-end — from database schema to deployed UI. I used
+                      Postgres tsvector full-text search for instant catalog
+                      filtering, and fractional position indexing to make
+                      drag-and-drop reordering work without cascading row
+                      updates. Auth is layered: JWT sessions at the middleware
+                      boundary, route guards at the page level, and row-level
+                      security in Supabase so the database enforces ownership
+                      even if application logic is bypassed. Playwright E2E
+                      tests cover the critical flows.
                     </p>
                     <div class="project-links">
-                      <a href="https://haze-song-tool.vercel.app" target="_blank" rel="noopener noreferrer">View live →</a>
-                      <a href="https://github.com/hazelugo/Song-Tool" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                      <a
+                        href="https://repertoire.hazelugo.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >View live →</a
+                      >
+                      <a
+                        href="https://github.com/hazelugo/Song-Tool"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >GitHub →</a
+                      >
                     </div>
                     <div class="project-tools">
                       <span class="tool-chip">Next.js 16</span>
@@ -1597,7 +1632,8 @@
                 <div>
                   <h3 class="project-name">Workout App</h3>
                   <div class="project-summary">
-                    Multi-user workout tracker with Google OAuth, per-user row-level security, and Vercel SPA routing
+                    Multi-user workout tracker with Google OAuth, per-user
+                    row-level security, and Vercel SPA routing
                   </div>
                 </div>
                 <span class="project-tag tag-fullstack">Full-Stack</span>
@@ -1607,11 +1643,28 @@
                 <div class="project-expand-inner">
                   <div class="project-detail">
                     <p class="project-detail-text">
-                      Workout App started as a single-user local viewer and evolved into a multi-user account-based tracker. I added Google OAuth for sign-in and configured per-user row-level security in Supabase so each account's data is isolated at the database level — not just in application code. Vercel SPA routing required explicit configuration so OAuth redirect URLs resolve correctly after the auth handshake completes.
+                      Workout App started as a single-user local viewer and
+                      evolved into a multi-user account-based tracker. I added
+                      Google OAuth for sign-in and configured per-user row-level
+                      security in Supabase so each account's data is isolated at
+                      the database level — not just in application code. Vercel
+                      SPA routing required explicit configuration so OAuth
+                      redirect URLs resolve correctly after the auth handshake
+                      completes.
                     </p>
                     <div class="project-links">
-                      <a href="https://workout.hazelugo.com" target="_blank" rel="noopener noreferrer">View live →</a>
-                      <a href="https://github.com/hazelugo/Workout-App" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                      <a
+                        href="https://workout.hazelugo.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >View live →</a
+                      >
+                      <a
+                        href="https://github.com/hazelugo/Workout-App"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >GitHub →</a
+                      >
                     </div>
                     <div class="project-tools">
                       <span class="tool-chip">JavaScript</span>
@@ -1635,7 +1688,9 @@
                 <div>
                   <h3 class="project-name">Emma's Math Quest</h3>
                   <div class="project-summary">
-                    Adaptive math practice game with synthesized audio, CSS confetti, and 60px touch targets — built for a real 6-year-old user
+                    Adaptive math practice game with synthesized audio, CSS
+                    confetti, and 60px touch targets — built for a real
+                    6-year-old user
                   </div>
                 </div>
                 <span class="project-tag tag-frontend">Frontend</span>
@@ -1645,11 +1700,29 @@
                 <div class="project-expand-inner">
                   <div class="project-detail">
                     <p class="project-detail-text">
-                      Emma's Math Quest is an adaptive math practice game I built for my 6-year-old daughter. Difficulty adjusts using a rolling 10-answer window targeting an 80% correct rate — hard enough to stretch her without losing her. Audio feedback is synthesized via the Web Audio API with no external sound files, CSS confetti fires on correct-answer streaks, and every interactive target is at least 60px to accommodate small hands. Built for a real user with real constraints — not a demo.
+                      Emma's Math Quest is an adaptive math practice game I
+                      built for my 6-year-old daughter. Difficulty adjusts using
+                      a rolling 10-answer window targeting an 80% correct rate —
+                      hard enough to stretch her without losing her. Audio
+                      feedback is synthesized via the Web Audio API with no
+                      external sound files, CSS confetti fires on correct-answer
+                      streaks, and every interactive target is at least 60px to
+                      accommodate small hands. Built for a real user with real
+                      constraints — not a demo.
                     </p>
                     <div class="project-links">
-                      <a href="https://emath.hazelugo.com" target="_blank" rel="noopener noreferrer">View live →</a>
-                      <a href="https://github.com/hazelugo/EmmaApp" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                      <a
+                        href="https://emath.hazelugo.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >View live →</a
+                      >
+                      <a
+                        href="https://github.com/hazelugo/EmmaApp"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >GitHub →</a
+                      >
                     </div>
                     <div class="project-tools">
                       <span class="tool-chip">Vue 3</span>
@@ -2069,7 +2142,7 @@
                     ></div>
                   </div>
                 </a>
-                <a href="resume.html" class="contact-link">
+                <a href="resume.pdf" class="contact-link" target="_blank" rel="noopener noreferrer">
                   <div class="contact-link-icon">
                     <svg
                       aria-hidden="true"
@@ -2081,7 +2154,9 @@
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     >
-                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <path
+                        d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                      />
                       <polyline points="14 2 14 8 20 8" />
                       <line x1="16" y1="13" x2="8" y2="13" />
                       <line x1="16" y1="17" x2="8" y2="17" />
@@ -2090,7 +2165,7 @@
                   </div>
                   <div>
                     <div class="contact-link-label">Resume</div>
-                    <div class="contact-link-val">hazelugo.com/resume</div>
+                    <div class="contact-link-val">Download PDF</div>
                   </div>
                 </a>
               </div>
@@ -2120,7 +2195,7 @@
       <span>© 2026 Hector Lugo</span>
       <span>Cybersecurity &amp; Network Professional · South Texas</span>
       <a href="mailto:haze.lugo@gmail.com">haze.lugo@gmail.com</a>
-      <a href="resume.html">View Resume</a>
+      <a href="resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
     </footer>
 
     <script>
